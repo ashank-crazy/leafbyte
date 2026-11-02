@@ -75,6 +75,16 @@ Included demonstration inputs are four credited NASA satellite-observation image
 
 The output sizes are actual encoding results; they do not establish real-world adoption, representative average savings, a measured visitor study or measured environmental benefit.
 
+## Recorded benchmark and implemented replacement
+
+On 3 November 2026, a Chrome 156 browser run with a 1920 px maximum width, WebP and a 0.970 sampled similarity floor produced **1,906,332 output bytes from 3,633,061 input bytes**, reducing the selected image files by **1,726,729 bytes (47.528213811989396%)**. One image, the glacier input, was resized from 2286 × 1524 to 1920 × 1280. The other three retained source dimensions. This combines format/quality changes with one resolution change; it is not a lossless or all-same-resolution result.
+
+A second run using a 480 px maximum width produced **170,226 output bytes**, a **3,462,835-byte reduction (95.3145295385902%)**. Every image was downscaled. Its score compares each encoded thumbnail to a reference already resized to that thumbnail's dimensions; it does not establish that source-resolution information was retained.
+
+The application now uses the second run's **83,618-byte Amazon WebP at 480 × 617** as `dist/assets/hero.webp`, replacing the earlier hero reference to the **1,921,833-byte** Amazon JPEG. That reference now identifies an image with **1,838,215 fewer bytes (95.64904963126348%)**. The source image remains available for the opt-in sample benchmark, so retaining both files increases stored project assets. This implementation change is not a measured count of visitor transfers, electricity or emissions.
+
+Raw exported manifests, per-image values, browser identification and steps are in [the benchmark report](BENCHMARK.md). Exported ZIP CRC integrity and SHA-256 matches for the actual output images were independently checked. Browser-native codecs can produce different outputs in other environments.
+
 ## Verification boundary
 
 Automated checks cover the calculations and packaging that can be checked deterministically. Browser verification is required to establish actual encoding behavior and that the displayed controls work in the tested browser. A successful source check alone is not proof of a working deployed experience.

@@ -30,9 +30,13 @@ Export uses a dependency-free ZIP writer with standard CRC32 checksums and UTF-8
 
 The immediate measured result is file-size reduction: original image bytes minus selected output image bytes. That is a concrete reduction in the amount of image data needed to store or transfer these particular outputs once they replace their originals.
 
+In a verified browser run, the four-image demonstration went from **3,633,061 bytes to 1,906,332 bytes—47.53% smaller**—using WebP, a 1920 px maximum width and a 0.970 sampled similarity floor. The glacier image was resized from 2286 to 1920 pixels wide; the other three retained their source dimensions. A separate 480 px thumbnail run produced **170,226 bytes, 95.31% smaller**, explicitly trading source resolution for thumbnail use. The exported ZIPs were independently checked for CRC integrity and output SHA-256 matches.
+
+We put one generated output into the product itself: LeafByte's hero now references an **83,618-byte, 480 × 617 WebP** derived from its 1,921,833-byte Amazon sample. That image reference uses a **95.65% smaller payload** than the earlier original. The original remains an opt-in benchmark input, so this is a replacement of the hero's referenced asset, not a reduction in total repository storage or a measurement of visitor traffic.
+
 The demonstration runs actual encodes on four credited NASA satellite-observation images totaling 3,633,061 input bytes. Their source pages, preparation and hashes are documented in the repository. It is a small demonstration corpus, not a representative average across websites, and it is not evidence of website adoption, real visitor traffic or a field trial. A traffic scenario is a conditional multiplication, not a measurement of transferred bytes. Caching, deployment configuration and actual image requests affect any real deployment result.
 
-LeafByte does not measure electricity, water consumption, avoided emissions or net environmental impact. Encoding itself also consumes resources. We make no conversion from saved bytes to CO2. The next validation step is to deploy the generated assets on a real website and compare its image requests before and after under the same conditions.
+LeafByte does not measure electricity, water consumption, avoided emissions or net environmental impact. Encoding itself also consumes resources. We make no conversion from saved bytes to CO2. The next validation step is to compare actual published-page requests under the same cache and viewport conditions and evaluate the outputs with website owners.
 
 ## Challenges
 

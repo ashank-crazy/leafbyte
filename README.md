@@ -6,6 +6,14 @@ LeafByte is a working browser-based image optimizer built for Green Shift Hacks 
 
 The environmental goal is to reduce unnecessary image storage and transfer. The prototype measures exact file-size changes. It does not measure electricity, water consumption, greenhouse-gas emissions, deployment or adoption.
 
+## Measured results
+
+A browser run on the four credited sample images reduced **3,633,061 input bytes to 1,906,332 output bytes: 47.53% smaller**, using WebP, a 1920 px maximum width and a 0.970 sampled similarity floor. This includes resizing the 2286 px-wide glacier image to 1920 px; the other three retain their source dimensions. A separate **480 px thumbnail** run produced 170,226 bytes, a **95.31% reduction with deliberate downscaling**. Neither number is a lossless or web-wide savings claim.
+
+LeafByte also uses its own output: its hero image now references an **83,618-byte, 480 × 617 WebP** generated from the 1,921,833-byte Amazon sample, a **95.65% smaller image payload** for that reference. The original remains available for the opt-in demonstration; total repository storage is not reduced by keeping both files. Actual visitor traffic, energy and emissions have not been measured.
+
+See [the reproducible benchmark](docs/BENCHMARK.md) for exact per-image values, settings, browser identification, hashes and the measurement boundary. The downloaded ZIPs were independently checked for CRC integrity and output-file SHA-256 matches.
+
 ## Run locally
 
 No dependencies, API key, account or build step are needed. From this directory:
@@ -61,6 +69,7 @@ The export tests verify standard CRC32, ZIP local headers and central-directory 
 - [Devpost story](docs/DEVPOST.md): a submission narrative with explicit impact limits.
 - [Demo script](docs/DEMO.md): a short walkthrough with no physical measurement or special hardware.
 - [Methodology](docs/METHODOLOGY.md): data, formulas and limitations.
+- [Benchmark](docs/BENCHMARK.md): measured browser encodes and reproduction steps.
 
 ## Sources and credits
 

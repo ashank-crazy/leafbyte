@@ -6,5 +6,7 @@ node_modules/
 .openai/local/
 artifacts/*.zip
 artifacts/*.png
+artifacts/*.jpg
+artifacts/qa/
 artifacts/*.webm
 artifacts/*.mp4
