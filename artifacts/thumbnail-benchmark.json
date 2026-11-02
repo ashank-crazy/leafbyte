@@ -1,0 +1,212 @@
+{
+  "schema": "leafbyte-export-v1",
+  "generatedAt": "2026-11-02T20:35:45.094Z",
+  "settings": {
+    "maxWidth": 480,
+    "similarityFloor": 0.97,
+    "format": "image/webp",
+    "budgetBytes": null,
+    "optimizationCompletedAt": "2026-11-02T20:35:26.756Z",
+    "metric": "mean local 8\u00d78 luminance SSIM on nine full-resolution patches, each up to128\u00d7128, on a3\u00d73 grid at output resolution",
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sampleAttribution": [
+      {
+        "name": "Blue Marble",
+        "path": "assets/earth.jpg",
+        "credit": "NASA Goddard Space Flight Center; Reto St\u00f6ckli and Robert Simmon",
+        "source": "https://science.nasa.gov/resource/blue-marble/",
+        "download": "https://assets.science.nasa.gov/content/dam/science/esd/climate/2023/12/ImageWall5_1920x1200-80.jpg",
+        "license": "NASA media usage guidelines (generally not subject to U.S. copyright)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "description": "Earth in true color: a composite made from real satellite observations, visualization date August 2, 2002.",
+        "preparation": "Unchanged downloaded JPEG.",
+        "bytes": 569175,
+        "width": 1920,
+        "height": 1200,
+        "sha256": "739d86617a6d82a031979e87caafcfda83fb7fbfbc1f1addfb5955451361e43c"
+      },
+      {
+        "name": "Amazon Rainforest",
+        "path": "assets/amazon.jpg",
+        "credit": "Jeff Schmaltz, MODIS Rapid Response at NASA GSFC",
+        "source": "https://science.nasa.gov/earth/earth-observatory/afternoon-clouds-over-the-amazon-rainforest-39936/",
+        "download": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/39000/39936/Brazil_AMO_2009231_lrg.jpg",
+        "license": "NASA media usage guidelines (generally not subject to U.S. copyright)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "description": "Natural-color Aqua MODIS observation of cloud patterns over the Amazon Rainforest, August 19, 2009.",
+        "preparation": "Original observation image proportionally resized to 1867 \u00d7 2400 pixels using Lanczos resampling, JPEG quality 80; no generative content.",
+        "bytes": 1921833,
+        "width": 1867,
+        "height": 2400,
+        "sha256": "60b9a3360c2964e96347bbc1e9bab3eaf38e77d14cba7f2edbd39e9d143a783c"
+      },
+      {
+        "name": "Berg Lake & Steller Glacier",
+        "path": "assets/glacier.jpg",
+        "credit": "NASA Earth Observatory / Wanmei Liang, using Landsat data from the U.S. Geological Survey",
+        "source": "https://science.nasa.gov/earth/earth-observatory/a-glacial-lakes-evolution-154628/",
+        "download": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/154000/154628/berglake_oli_20240629_lrg.jpg",
+        "license": "NASA media usage guidelines (generally not subject to U.S. copyright)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "description": "Natural-color Landsat observation of Berg Lake and the Steller Glacier in Alaska, June 29, 2024.",
+        "preparation": "Unchanged downloaded JPEG.",
+        "bytes": 1072533,
+        "width": 2286,
+        "height": 1524,
+        "sha256": "a403cf4aade9b58dd4b766cab953c4d991fdf4e13950fc8c43fd51380f3bbbd2"
+      },
+      {
+        "name": "Vancouver Island Bloom",
+        "path": "assets/ocean.jpg",
+        "credit": "Jeff Schmaltz, MODIS Land Rapid Response Team at NASA GSFC",
+        "source": "https://science.nasa.gov/earth/earth-observatory/phytoplankton-off-vancouver-island-16887/",
+        "download": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/16000/16887/Vancouver_AMO_2006176.jpg",
+        "license": "NASA media usage guidelines (generally not subject to U.S. copyright)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "description": "Aqua MODIS observation of ocean phytoplankton off Vancouver Island, June 25, 2006. Includes original NASA annotation.",
+        "preparation": "Unchanged downloaded 540 \u00d7 540 JPEG; deliberately retained as a small input.",
+        "bytes": 69520,
+        "width": 540,
+        "height": 540,
+        "sha256": "6d14e3f39459d9993d33acc36a3e6b02145922984ac942324930476fef92479e"
+      }
+    ],
+    "excludedImages": []
+  },
+  "summary": {
+    "images": 4,
+    "inputBytes": 3633061,
+    "outputBytes": 170226,
+    "savedBytes": 3462835,
+    "savedPercent": 95.3145295385902
+  },
+  "measurement": {
+    "bytes": "Exact lengths of input files and selected output files, excluding ZIP overhead and generated documentation.",
+    "similarity": "Encoded candidates use mean local luminance SSIM in non-overlapping 8 \u00d7 8 blocks across nine native-resolution patches up to 128 \u00d7 128 pixels, positioned at left/center/right by top/middle/bottom. Patches are not downsampled and can overlap on small images. The original is first resampled to the output dimensions. RGBA samples are composited on white. Retained originals receive 1 by file identity. This does not measure resolution loss against the full original and can miss color shifts or artifacts outside the patches. It is not a guarantee of perceptual equivalence, legibility, color fidelity or accessibility. Inspect the images yourself.",
+    "savings": "Output file reduction only. Storage or transfer benefits require using these files instead of the originals. Cache behavior, repeat visits and encoding overhead are not measured.",
+    "environment": "Electricity, water consumption, avoided emissions and total environmental impact have not been measured. Traffic scenarios, if shown in the app, are hypothetical.",
+    "hashes": "SHA-256 of each original input file and each exact exported output file."
+  },
+  "images": [
+    {
+      "input": {
+        "name": "earth.jpg",
+        "bytes": 569175,
+        "width": 1920,
+        "height": 1200,
+        "mime": "image/jpeg",
+        "sha256": "739d86617a6d82a031979e87caafcfda83fb7fbfbc1f1addfb5955451361e43c"
+      },
+      "output": {
+        "path": "images/earth-leafbyte.webp",
+        "bytes": 12146,
+        "width": 480,
+        "height": 300,
+        "mime": "image/webp",
+        "sha256": "56ee2c35b40ea1d02d7a6866207f4e9b87f6d15f899f4a7bd1d3f7fd88291289"
+      },
+      "selectedCandidate": 6,
+      "encoderQuality": 0.52,
+      "sampledSimilarity": 0.973859226915849,
+      "keptOriginal": false,
+      "savedBytes": 557029,
+      "savedPercent": 97.86603417226688,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 108.59999999403954
+    },
+    {
+      "input": {
+        "name": "amazon.jpg",
+        "bytes": 1921833,
+        "width": 1867,
+        "height": 2400,
+        "mime": "image/jpeg",
+        "sha256": "60b9a3360c2964e96347bbc1e9bab3eaf38e77d14cba7f2edbd39e9d143a783c"
+      },
+      "output": {
+        "path": "images/amazon-leafbyte.webp",
+        "bytes": 83618,
+        "width": 480,
+        "height": 617,
+        "mime": "image/webp",
+        "sha256": "5ebba90891bed13128483b45e03cf84d0790a39f6c5b26884d353982bc5e13ca"
+      },
+      "selectedCandidate": 4,
+      "encoderQuality": 0.68,
+      "sampledSimilarity": 0.97065669907812,
+      "keptOriginal": false,
+      "savedBytes": 1838215,
+      "savedPercent": 95.64904963126348,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 272.09999999403954
+    },
+    {
+      "input": {
+        "name": "glacier.jpg",
+        "bytes": 1072533,
+        "width": 2286,
+        "height": 1524,
+        "mime": "image/jpeg",
+        "sha256": "a403cf4aade9b58dd4b766cab953c4d991fdf4e13950fc8c43fd51380f3bbbd2"
+      },
+      "output": {
+        "path": "images/glacier-leafbyte.webp",
+        "bytes": 38602,
+        "width": 480,
+        "height": 320,
+        "mime": "image/webp",
+        "sha256": "2b49abce519f5f3be3d6dfdf9cb944f0eb7ea0b8ec44d6dcb5fc3d1f14ffe71a"
+      },
+      "selectedCandidate": 2,
+      "encoderQuality": 0.84,
+      "sampledSimilarity": 0.9779332447882066,
+      "keptOriginal": false,
+      "savedBytes": 1033931,
+      "savedPercent": 96.4008566636178,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 157.10000002384186
+    },
+    {
+      "input": {
+        "name": "ocean.jpg",
+        "bytes": 69520,
+        "width": 540,
+        "height": 540,
+        "mime": "image/jpeg",
+        "sha256": "6d14e3f39459d9993d33acc36a3e6b02145922984ac942324930476fef92479e"
+      },
+      "output": {
+        "path": "images/ocean-leafbyte.webp",
+        "bytes": 35860,
+        "width": 480,
+        "height": 480,
+        "mime": "image/webp",
+        "sha256": "b375d739d21a33c1f826cbe675b82051c001a3ede0778b7463398475016f1730"
+      },
+      "selectedCandidate": 2,
+      "encoderQuality": 0.84,
+      "sampledSimilarity": 0.9808823978125827,
+      "keptOriginal": false,
+      "savedBytes": 33660,
+      "savedPercent": 48.41772151898734,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 122.2000000178814
+    }
+  ],
+  "sources": [
+    "https://www.w3.org/TR/web-sustainability-guidelines/",
+    "https://web.dev/learn/performance/image-performance"
+  ]
+}
