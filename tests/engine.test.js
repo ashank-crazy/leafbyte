@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { sampledSSIM, chooseBundle, sniffImage, formatBytes, sha256, optimizeImage, outputDimensions, patchSamplePlan, LIMITS } from '../dist/engine.js';
+import { sampledSSIM, chooseBundle, sniffImage, formatBytes, sha256, optimizeImage, optimizeResponsiveImage, responsiveWidths, outputDimensions, patchSamplePlan, LIMITS } from '../dist/engine.js';
 
 test('SSIM is 1 for identical images, including partial edge blocks', () => {
   const pixels = Uint8Array.from({ length: 11 * 13 }, (_, i) => (i * 23) % 256);
@@ -242,6 +242,61 @@ test('native encoder failure keeps the original as an exportable fallback', asyn
     assert.equal(closed, true);
     URL.revokeObjectURL(result.originalUrl);
   } finally {
+    if (savedDocument === undefined) delete globalThis.document; else globalThis.document = savedDocument;
+    if (savedBitmap === undefined) delete globalThis.createImageBitmap; else globalThis.createImageBitmap = savedBitmap;
+  }
+});
+
+test('responsive width presets never upscale or duplicate the primary width', () => {
+  assert.deepEqual(responsiveWidths(320, 1920), []);
+  assert.deepEqual(responsiveWidths(480, 480), []);
+  assert.deepEqual(responsiveWidths(800, 1920), [480]);
+  assert.deepEqual(responsiveWidths(2400, 1920), [480, 960]);
+  assert.deepEqual(responsiveWidths(3840, 3840), [480, 960, 1920]);
+  assert.throws(() => responsiveWidths(0, 1920), /positive integers/);
+});
+
+test('responsive optimization returns accepted smaller outputs and releases extra source URLs', async () => {
+  const savedDocument = globalThis.document;
+  const savedBitmap = globalThis.createImageBitmap;
+  const createUrl = URL.createObjectURL;
+  const revokeUrl = URL.revokeObjectURL;
+  const created = [], revoked = [], progress = [];
+  URL.createObjectURL = function(blob) { const url = createUrl.call(this, blob); created.push(url); return url; };
+  URL.revokeObjectURL = function(url) { revoked.push(url); revokeUrl.call(this, url); };
+  globalThis.createImageBitmap = async blob => ({ width: blob.sampleWidth || 2400, height: blob.sampleHeight || 1600, close() {} });
+  globalThis.document = { createElement() { return {
+    width: 0, height: 0,
+    getContext() { return { drawImage() {}, fillRect() {}, getImageData(x, y, width, height) { return { data: new Uint8ClampedArray(width * height * 4) }; } }; },
+    toBlob(callback, mime, quality) {
+      const blob = new Blob([new Uint8Array(Math.max(1, Math.ceil(this.width * this.height * quality / 100_000)))], { type: mime });
+      blob.sampleWidth = this.width; blob.sampleHeight = this.height;
+      callback(blob);
+    }
+  }; } };
+  let result;
+  try {
+    const file = new Blob([png()], { type: 'image/png' });
+    Object.defineProperty(file, 'webkitRelativePath', { value: 'website/images/photo.png' });
+    result = await optimizeResponsiveImage(file, { maxWidth: 1920, onProgress: update => progress.push(update) });
+    assert.equal(result.width, 1920);
+    assert.equal(result.relativePath, 'website/images/photo.png');
+    assert.deepEqual(result.variants.map(variant => variant.width), [480, 960]);
+    for (const variant of result.variants) {
+      assert.equal(variant.keptOriginal, false);
+      assert.equal(variant.mime, 'image/webp');
+      assert.ok(variant.similarity >= 0.97);
+      assert.ok(variant.bytes < file.size);
+      assert.ok(variant.width < result.width);
+    }
+    assert.equal(created.length, 3);
+    assert.equal(revoked.length, 2);
+    assert.ok(!revoked.includes(result.originalUrl));
+    assert.equal(progress.at(-1).completed, progress.at(-1).total);
+    assert.ok(result.candidates[0].keptOriginal);
+  } finally {
+    if (result) revokeUrl.call(URL, result.originalUrl);
+    URL.createObjectURL = createUrl; URL.revokeObjectURL = revokeUrl;
     if (savedDocument === undefined) delete globalThis.document; else globalThis.document = savedDocument;
     if (savedBitmap === undefined) delete globalThis.createImageBitmap; else globalThis.createImageBitmap = savedBitmap;
   }

@@ -267,11 +267,57 @@ export async function optimizeImage(file, { maxWidth = 1920, similarityFloor = 0
     }
     if (candidates.length === 1) warnings.push('No tested encoding was both smaller and above your similarity floor. The original is retained.');
     const name = typeof file.name === 'string' && file.name ? file.name : 'image';
-    return { file, name, originalBytes: file.size, originalWidth, originalHeight, width, height, originalUrl: URL.createObjectURL(file), candidates, warnings, durationMs: performance.now() - start };
+    return { file, name, relativePath: file.webkitRelativePath || name, originalBytes: file.size, originalWidth, originalHeight, width, height, originalUrl: URL.createObjectURL(file), candidates, warnings, durationMs: performance.now() - start };
   } finally {
     original.close?.();
     if (target) { target.canvas.width = 1; target.canvas.height = 1; }
   }
+}
+
+export const RESPONSIVE_WIDTHS = Object.freeze([480, 960, 1920]);
+
+/** Presets below the primary image; its own width is already in candidates. */
+export function responsiveWidths(originalWidth, primaryWidth) {
+  if (!Number.isSafeInteger(originalWidth) || !Number.isSafeInteger(primaryWidth) || originalWidth < 1 || primaryWidth < 1) throw new Error('Responsive image widths must be positive integers.');
+  const limit = Math.min(originalWidth, primaryWidth);
+  return RESPONSIVE_WIDTHS.filter(width => width < limit);
+}
+
+/**
+ * Add independently verified smaller responsive images. Existing callers of
+ * optimizeImage and chooseBundle retain their original behavior and budgets.
+ */
+export async function optimizeResponsiveImage(file, options = {}) {
+  const started = performance.now();
+  const notify = typeof options.onProgress === 'function' ? options.onProgress : () => {};
+  const steps = QUALITIES.length;
+  const result = await optimizeImage(file, { ...options, onProgress(progress) {
+    notify({ ...progress, total: steps * (RESPONSIVE_WIDTHS.length + 1), phase: 'primary' });
+  } });
+  const widths = responsiveWidths(result.originalWidth, result.width);
+  const total = steps * (widths.length + 1);
+  const variants = [];
+  for (let index = 0; index < widths.length; index++) {
+    const width = widths[index];
+    let variantResult;
+    try {
+      variantResult = await optimizeImage(file, { ...options, maxWidth: width, onProgress(progress) {
+        notify({ ...progress, completed: steps * (index + 1) + progress.completed, total, phase: 'responsive', width });
+      } });
+      const accepted = variantResult.candidates.filter(candidate => !candidate.keptOriginal && candidate.width < result.width && candidate.width <= width);
+      accepted.sort((a, b) => a.bytes - b.bytes || b.similarity - a.similarity);
+      const selected = accepted[0];
+      if (selected && !variants.some(variant => variant.width === selected.width)) variants.push({ ...selected });
+      else if (!selected) result.warnings.push(`No ${width}px responsive encoding was smaller than the source and above the similarity floor.`);
+    } catch (error) {
+      result.warnings.push(`The ${width}px responsive image was skipped: ${error.message}`);
+    } finally {
+      if (variantResult?.originalUrl) URL.revokeObjectURL(variantResult.originalUrl);
+    }
+  }
+  notify({ completed: total, total, phase: 'complete' });
+  if (variants.length) result.warnings.push('Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files.');
+  return { ...result, variants, durationMs: performance.now() - started };
 }
 
 /**

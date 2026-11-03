@@ -117,6 +117,27 @@ function extension(mime, name) {
   return /\.([a-z0-9]{1,8})$/i.exec(name)?.[1]?.toLowerCase() || 'bin';
 }
 
+function uniqueBasename(stem, suffix, ext, usedNames) {
+  let basename = `${stem}-${suffix}.${ext}`;
+  let copy = 2;
+  while (usedNames.has(basename.toLocaleLowerCase('en-US'))) basename = `${stem}-${suffix}-${copy++}.${ext}`;
+  usedNames.add(basename.toLocaleLowerCase('en-US'));
+  return basename;
+}
+
+// URL encoding matters especially for srcset: a literal comma separates entries.
+function assetUrl(path) { return path.split('/').map(part => encodeURIComponent(part)).join('/'); }
+
+function imageSnippet(record) {
+  const source = escapeHtml(assetUrl(record.output.path));
+  const dimensions = `width="${escapeHtml(record.output.width)}" height="${escapeHtml(record.output.height)}" alt=""`;
+  if (!record.variants.length) return `<img src="${source}" ${dimensions}>`;
+  const options = [...record.variants, record.output].sort((a, b) => a.width - b.width);
+  const srcset = escapeHtml(options.map(option => `${assetUrl(option.path)} ${option.width}w`).join(', '));
+  const sizes = escapeHtml(`(max-width: ${record.output.width}px) 100vw, ${record.output.width}px`);
+  return `<picture>\n  <source type="${escapeHtml(record.output.mime)}" srcset="${srcset}" sizes="${sizes}">\n  <img src="${source}" srcset="${srcset}" sizes="${sizes}" ${dimensions}>\n</picture>`;
+}
+
 export async function buildExport(results, selections = [], settings = {}) {
   if (!Array.isArray(results) || !results.length) throw new Error('Add and optimize images before exporting.');
   const files = [];
@@ -137,20 +158,37 @@ export async function buildExport(results, selections = [], settings = {}) {
     const stem = sanitized.replace(/\.[^.]+$/, '') || 'image';
     const suffix = candidate.keptOriginal ? 'original' : 'leafbyte';
     const ext = extension(outputMime, sanitized);
-    let basename = `${stem}-${suffix}.${ext}`;
-    let copy = 2;
-    while (usedNames.has(basename.toLocaleLowerCase('en-US'))) {
-      basename = `${stem}-${suffix}-${copy}.${ext}`;
-      copy += 1;
-    }
-    usedNames.add(basename.toLocaleLowerCase('en-US'));
+    const basename = uniqueBasename(stem, suffix, ext, usedNames);
     const outputPath = `images/${basename}`;
     const [inputSha256, outputSha256] = await Promise.all([hash(originalData), hash(outputData)]);
     const savedBytes = originalData.length - outputData.length;
     files.push({ name: outputPath, data: outputData });
+    const outputWidth = candidate.width ?? result.width;
+    const outputHeight = candidate.height ?? result.height;
+    const variantsByWidth = new Map();
+    if (!candidate.keptOriginal && Array.isArray(result.variants)) {
+      for (const variant of result.variants) {
+        const mime = variant.mime || variant.blob?.type;
+        // An unchanged source is never duplicated into a responsive export.
+        // Different formats need separate source groups, which this tool does
+        // not generate. Larger/equal-width entries are already the primary.
+        if (variant.keptOriginal || mime !== outputMime || !Number.isSafeInteger(variant.width) || !Number.isSafeInteger(variant.height) || variant.width < 1 || variant.height < 1 || variant.width >= outputWidth || variant.width > result.originalWidth || !variant.blob?.arrayBuffer) continue;
+        const data = new Uint8Array(await variant.blob.arrayBuffer());
+        const previous = variantsByWidth.get(variant.width);
+        if (!previous || data.length < previous.data.length) variantsByWidth.set(variant.width, { ...variant, mime, data });
+      }
+    }
+    const variants = [];
+    for (const variant of [...variantsByWidth.values()].sort((a, b) => a.width - b.width)) {
+      const variantPath = `images/${uniqueBasename(stem, `leafbyte-${variant.width}w`, extension(variant.mime, sanitized), usedNames)}`;
+      const sha256 = await hash(variant.data);
+      files.push({ name: variantPath, data: variant.data });
+      variants.push({ path: variantPath, bytes: variant.data.length, width: variant.width, height: variant.height, mime: variant.mime, sha256, encoderQuality: variant.quality ?? null, sampledSimilarity: variant.similarity ?? null });
+    }
     records.push({
-      input: { name: inputName, bytes: originalData.length, width: result.originalWidth, height: result.originalHeight, mime: result.file.type || null, sha256: inputSha256 },
-      output: { path: outputPath, bytes: outputData.length, width: candidate.width ?? result.width, height: candidate.height ?? result.height, mime: outputMime, sha256: outputSha256 },
+      input: { name: inputName, relativePath: result.relativePath || result.file.webkitRelativePath || inputName, bytes: originalData.length, width: result.originalWidth, height: result.originalHeight, mime: result.file.type || null, sha256: inputSha256 },
+      output: { path: outputPath, bytes: outputData.length, width: outputWidth, height: outputHeight, mime: outputMime, sha256: outputSha256 },
+      variants,
       selectedCandidate: selectedIndex,
       encoderQuality: candidate.quality ?? null,
       sampledSimilarity: candidate.similarity ?? null,
@@ -163,27 +201,29 @@ export async function buildExport(results, selections = [], settings = {}) {
   }
   const inputBytes = records.reduce((sum, record) => sum + record.input.bytes, 0);
   const outputBytes = records.reduce((sum, record) => sum + record.output.bytes, 0);
+  const additionalVariantBytes = records.reduce((sum, record) => sum + record.variants.reduce((total, variant) => total + variant.bytes, 0), 0);
   const manifest = {
     schema: 'leafbyte-export-v1',
     generatedAt: new Date().toISOString(),
     settings,
-    summary: { images: records.length, inputBytes, outputBytes, savedBytes: inputBytes - outputBytes, savedPercent: inputBytes ? (inputBytes - outputBytes) / inputBytes * 100 : 0 },
+    summary: { images: records.length, inputBytes, outputBytes, primaryOutputBytes: outputBytes, additionalVariantBytes, allImageBytes: outputBytes + additionalVariantBytes, variantFiles: records.reduce((sum, record) => sum + record.variants.length, 0), savedBytes: inputBytes - outputBytes, savedPercent: inputBytes ? (inputBytes - outputBytes) / inputBytes * 100 : 0 },
     measurement: {
-      bytes: 'Exact lengths of input files and selected output files, excluding ZIP overhead and generated documentation.',
+      bytes: 'Exact file lengths, excluding ZIP overhead and generated documentation. outputBytes and primaryOutputBytes count only selected primary images. additionalVariantBytes counts smaller responsive files. allImageBytes is the actual combined image storage in this archive. savedBytes and savedPercent compare source files with primary outputs only; they are not total archive storage savings.',
       similarity: 'Encoded candidates use mean local luminance SSIM in non-overlapping 8 × 8 blocks across nine native-resolution patches up to 128 × 128 pixels, positioned at left/center/right by top/middle/bottom. Patches are not downsampled and can overlap on small images. The original is first resampled to the output dimensions. RGBA samples are composited on white. Retained originals receive 1 by file identity. This does not measure resolution loss against the full original and can miss color shifts or artifacts outside the patches. It is not a guarantee of perceptual equivalence, legibility, color fidelity or accessibility. Inspect the images yourself.',
       savings: 'Output file reduction only. Storage or transfer benefits require using these files instead of the originals. Cache behavior, repeat visits and encoding overhead are not measured.',
+      responsive: 'Responsive variants are additional stored files. The browser chooses among srcset candidates using layout size, pixel density and browser behavior; it does not ordinarily download every variant for one image. Supplied sizes assume full viewport width up to the primary image width and must be adapted to the website layout. Actual candidate selection and transferred bytes are not measured. Original selections omit variants. Folder-relative input paths are recorded for mapping; exported filenames are flattened and deduplicated.',
       environment: 'Electricity, water consumption, avoided emissions and total environmental impact have not been measured. Traffic scenarios, if shown in the app, are hypothetical.',
       hashes: 'SHA-256 of each original input file and each exact exported output file.',
     },
     images: records,
     sources: ['https://www.w3.org/TR/web-sustainability-guidelines/', 'https://web.dev/learn/performance/image-performance'],
   };
-  const snippets = records.map(record => `<img src="${escapeHtml(record.output.path)}" width="${escapeHtml(record.output.width)}" height="${escapeHtml(record.output.height)}" alt="">`).join('\n');
-  const html = `<!doctype html>\n<html lang="en"><meta charset="utf-8"><title>LeafByte exported images</title>\n<!-- Replace empty alt text with a useful description for meaningful images. Empty alt is suitable only for decorative images. -->\n<!-- Width and height describe the encoded asset. Use responsive CSS suited to your page. -->\n${snippets}\n</html>\n`;
+  const snippets = records.map(imageSnippet).join('\n');
+  const html = `<!doctype html>\n<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LeafByte exported images</title>\n<style>img{max-width:100%;height:auto}</style>\n<!-- Replace empty alt text with a useful description for meaningful images. Empty alt is suitable only for decorative images. -->\n<!-- Width and height describe the primary asset. Adapt sizes and responsive CSS to your layout. Each picture uses one output format, not a separate legacy-format fallback. -->\n${snippets}\n</html>\n`;
   const attribution = Array.isArray(settings.sampleAttribution) && settings.sampleAttribution.length
     ? `\nSample image credits\n\n${settings.sampleAttribution.map(asset => `${asset.name}: ${asset.credit}\nSource: ${asset.source}\nPreparation: ${asset.preparation}\nUsage: ${asset.licenseUrl}`).join('\n\n')}\n\nNASA does not endorse LeafByte. Preserve these credits when using the sample images. Full attribution metadata is also in manifest.json settings.sampleAttribution.\n`
     : '';
-  const readme = `LeafByte image bundle\n\n1. Review each image at its intended display size, including text, colors and transparency.\n2. Copy images/ into your website and replace the old image references. The manifest alone does not change a website.\n3. Use index-snippets.html as a starting point. Add appropriate alternative text and responsive styles. The snippets do not automatically add srcset variants.\n4. Check the published page on your target devices. Keep your originals outside this bundle as a backup.\n\nmanifest.json contains exact input/output bytes and SHA-256 hashes. Saved bytes exclude this ZIP container and generated documentation. A similarity score is a sampled proxy, not a promise of perceptual equivalence.\n\nThis export measures file reduction. It does not measure electricity, water or greenhouse-gas emissions, and does not prove deployment, adoption or environmental savings. Browser encoding also consumes resources.\n\nImage metadata may be removed or changed during encoding. Originals kept unchanged retain their existing metadata. Review files before publishing them.\n\nThe ZIP uses the standard store method because image formats are already compressed. Extract it with a normal ZIP utility. No runtime or account is required to use the exported images.\n\nMethod sources:\nhttps://www.w3.org/TR/web-sustainability-guidelines/\nhttps://web.dev/learn/performance/image-performance\n${attribution}`;
+  const readme = `LeafByte image bundle\n\n1. Review each image at its intended display size, including text, colors and transparency.\n2. Copy images/ into your website and replace the old image references. The manifest alone does not change a website.\n3. Use index-snippets.html as a starting point. Add appropriate alternative text and responsive styles. Responsive exports include srcset and sizes; adapt sizes to your actual layout. Single-file or retained-original outputs have no srcset variants.\n4. Check the published page on your target devices. Keep your originals outside this bundle as a backup.\n\nmanifest.json contains exact input/output bytes and SHA-256 hashes. Saved bytes compare primary outputs only. Additional responsive files increase storage: summary.additionalVariantBytes and summary.allImageBytes disclose their exact cost. ZIP container and generated documentation are excluded from image totals. A similarity score is a sampled proxy, not a promise of perceptual equivalence.\n\nFolder-relative source paths are recorded in manifest.json. Output names are flattened and deduplicated; use that mapping when replacing nested assets.\n\nA responsive browser normally chooses one suitable srcset image, rather than transferring every variant. Actual browser selections and traffic are not measured.\n\nThis export measures file reduction. It does not measure electricity, water or greenhouse-gas emissions, and does not prove deployment, adoption or environmental savings. Browser encoding also consumes resources.\n\nImage metadata may be removed or changed during encoding. Originals kept unchanged retain their existing metadata. Review files before publishing them.\n\nThe ZIP uses the standard store method because image formats are already compressed. Extract it with a normal ZIP utility. No runtime or account is required to use the exported images.\n\nMethod sources:\nhttps://www.w3.org/TR/web-sustainability-guidelines/\nhttps://web.dev/learn/performance/image-performance\n${attribution}`;
   files.push({ name: 'manifest.json', data: encoder.encode(`${JSON.stringify(manifest, null, 2)}\n`) });
   files.push({ name: 'index-snippets.html', data: encoder.encode(html) });
   files.push({ name: 'README.txt', data: encoder.encode(readme) });

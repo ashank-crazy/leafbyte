@@ -1,9 +1,10 @@
-import { optimizeImage, chooseBundle, formatBytes, sniffImage, LIMITS } from './engine.js';
+import { optimizeImage, optimizeResponsiveImage, chooseBundle, formatBytes, sniffImage, LIMITS } from './engine.js';
 import { buildExport, safeFilename } from './export.js';
+import { estimateTransferImpact } from './carbon.js';
 
 const $ = id => document.getElementById(id);
 const state = { entries: [], active: null, busy: false, samples: [], nextId: 1, selected: [], appliedSettings: null, outputUrl: null, toastTimer: null, completedAt: null };
-const controls = ['demo-button', 'stage-demo', 'file-input', 'clear-button', 'fidelity', 'max-width', 'output-format', 'budget', 'optimize-button'];
+const controls = ['demo-button', 'stage-demo', 'file-input', 'folder-input', 'folder-button', 'responsive', 'clear-button', 'fidelity', 'max-width', 'output-format', 'budget', 'optimize-button'];
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -12,7 +13,7 @@ function element(tag, className, text) {
   return node;
 }
 function settings() {
-  return { maxWidth: Number($('max-width').value), similarityFloor: Number($('fidelity').value), format: $('output-format').value };
+  return { maxWidth: Number($('max-width').value), similarityFloor: Number($('fidelity').value), format: $('output-format').value, responsive: $('responsive').checked };
 }
 function budgetBytes() {
   const raw = $('budget').value.trim();
@@ -61,9 +62,9 @@ async function addFiles(files, sampleInfo = []) {
   try {
   for (let index = 0; index < files.length; index++) {
     const file = files[index];
-    if (state.entries.length >= 12) { errors.push('A bundle can contain up to 12 images.'); break; }
+    if (state.entries.length >= 200) { errors.push('A bundle can contain up to 200 images.'); break; }
     if (!file.size || file.size > LIMITS.maxBytes) { errors.push(`${file.name}: choose a non-empty image up to 20 MiB.`); continue; }
-    if (state.entries.reduce((sum, item) => sum + item.file.size, 0) + file.size > 80 * 1024 * 1024) { errors.push('Keep the whole input bundle under 80 MiB.'); break; }
+    if (state.entries.reduce((sum, item) => sum + item.file.size, 0) + file.size > 200 * 1024 * 1024) { errors.push('Keep the whole input bundle under 200 MiB.'); break; }
     try {
       const info = sniffImage(new Uint8Array(await file.arrayBuffer()));
       if (!info.supported) { errors.push(`${file.name}: ${info.reason}`); continue; }
@@ -112,7 +113,7 @@ async function runOptimization() {
       announce(`Encoding ${index + 1} of ${state.entries.length}: ${entry.file.name}`);
       render();
       try {
-        entry.result = await optimizeImage(entry.file, { ...selectedSettings, onProgress(progress) {
+        entry.result = await (selectedSettings.responsive ? optimizeResponsiveImage : optimizeImage)(entry.file, { ...selectedSettings, onProgress(progress) {
           $('progress-fill').style.width = `${100 * (index + progress.completed / progress.total) / state.entries.length}%`;
           announce(`${index + 1}/${state.entries.length} · ${entry.file.name} · comparing option ${progress.completed}/${progress.total}`);
         } });
@@ -142,7 +143,7 @@ function renderLibrary() {
     const selection = chosen(entry);
     const row = element('button', `file-row${entry.id === state.active ? ' selected' : ''}`);
     row.type = 'button'; row.setAttribute('aria-pressed', String(entry.id === state.active)); row.setAttribute('aria-label', `Inspect ${entry.file.name}`);
-    const img = element('img', 'file-thumb'); img.src = entry.previewUrl; img.alt = '';
+    const img = element('img', 'file-thumb'); img.src = entry.previewUrl; img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
     const details = element('span', 'file-details');
     details.append(element('span', 'file-name', entry.sample?.name || entry.file.name), element('span', 'file-sizes', `${formatBytes(entry.file.size)}${selection ? ` → ${formatBytes(selection.bytes)}` : ''}`));
     const saving = selection ? selection.keptOriginal ? 'Kept' : `−${((1 - selection.bytes / entry.file.size) * 100).toFixed(0)}%` : entry.error ? 'Error' : 'Ready';
@@ -203,14 +204,23 @@ function renderSummary() {
     text = output <= budget ? `Within your ${formatBytes(budget)} budget. You can inspect or change individual encodings.` : minimum > budget ? `The smallest accepted bundle is ${formatBytes(minimum)}—above your ${formatBytes(budget)} budget. Try a smaller width or a lower similarity floor.` : `Your manual selections exceed the ${formatBytes(budget)} budget. Change the budget to rebalance.`;
   } else if (good.length) text = 'Selected encodings shown. Add a byte budget to balance bundle size and sampled similarity.';
   if (good.length && good.length !== state.entries.length) text += ` ${state.entries.length - good.length} image(s) are pending or excluded; export totals include processed images only.`;
+  const variants = good.flatMap(entry => chosen(entry)?.keptOriginal ? [] : entry.result.variants || []);
+  if (variants.length) text += ` Responsive export: ${variants.length} additional files (${formatBytes(variants.reduce((sum, image) => sum + image.bytes, 0))} of extra storage).`;
   $('budget-status').textContent = text;
-  const count = Math.min(1e9, Math.max(0, Number($('transfer-count').value) || 0));
+  const count = Math.min(1e6, Math.max(0, Math.floor(Number($('transfer-count').value) || 0)));
   const saved = Math.max(0, processedOriginal - output);
   $('transfer-savings').textContent = good.length ? formatBytes(saved * count) : '—';
   $('scenario-original').textContent = good.length ? formatBytes(processedOriginal * count) : '—';
   $('scenario-output').textContent = good.length ? formatBytes(output * count) : '—';
   $('original-bar').style.width = good.length ? '100%' : '0%';
   $('output-bar').style.width = good.length ? `${100 * output / processedOriginal}%` : '0%';
+  if (good.length) {
+    const impact = estimateTransferImpact({ bytesSaved: saved, transfers: count, returnVisitPercentage: Number($('return-rate').value), greenHosting: $('green-hosting').checked });
+    const unit = impact.highGrams >= 1000 ? 'kg' : 'g';
+    const divisor = unit === 'kg' ? 1000 : 1;
+    $('carbon-savings').textContent = `${(impact.lowGrams / divisor).toFixed(2)}–${(impact.highGrams / divisor).toFixed(2)} ${unit} CO₂e`;
+    $('carbon-scenarios').textContent = `${Number($('return-rate').value) * 100}% returning visitors ↔ fully uncached reference · SWD v4`;
+  } else $('carbon-savings').textContent = '—';
 }
 function render() { renderLibrary(); renderInspector(); renderSummary(); }
 function download(blob, name) {
@@ -225,7 +235,7 @@ async function exportBundle() {
   $('export-button').textContent = 'Preparing evidence…';
   announce('Packaging images and checking their SHA-256 hashes…');
   try {
-    const blob = await buildExport(good.map(entry => entry.result), selectedSnapshot, { ...appliedSnapshot, budgetBytes: budgetBytes(), optimizationCompletedAt: state.completedAt, metric: 'mean local 8×8 luminance SSIM on nine full-resolution patches, each up to128×128, on a3×3 grid at output resolution', browser: navigator.userAgent, sampleAttribution: good.filter(entry => entry.sample).map(entry => entry.sample), excludedImages: state.entries.filter(entry => !entry.result).map(entry => ({ name: entry.file.name, reason: entry.error || 'Not processed' })) });
+    const blob = await buildExport(good.map(entry => entry.result), selectedSnapshot, { ...appliedSnapshot, budgetBytes: budgetBytes(), optimizationCompletedAt: state.completedAt, modelledImpact: estimateTransferImpact({bytesSaved: good.reduce((sum, entry, i) => sum + entry.file.size - entry.result.candidates[selectedSnapshot[i]].bytes, 0), transfers: Math.min(1e6, Math.max(0, Math.floor(Number($('transfer-count').value) || 0))), returnVisitPercentage: Number($('return-rate').value), greenHosting: $('green-hosting').checked}), metric: 'mean local 8×8 luminance SSIM on nine full-resolution patches, each up to128×128, on a3×3 grid at output resolution', browser: navigator.userAgent, sampleAttribution: good.filter(entry => entry.sample).map(entry => entry.sample), excludedImages: state.entries.filter(entry => !entry.result).map(entry => ({ name: entry.file.name, reason: entry.error || 'Not processed' })) });
     download(blob, 'leafbyte-bundle.zip'); toast('Your images and evidence report are ready.');
     announce('Bundle exported. Extract it and use the images on your site.');
   } catch (error) { showError(error.message); }
@@ -243,9 +253,14 @@ $('clear-button').addEventListener('click', clearAll);
 $('optimize-button').addEventListener('click', runOptimization);
 $('export-button').addEventListener('click', exportBundle);
 $('file-input').addEventListener('change', async event => { await addFiles(Array.from(event.target.files)); event.target.value = ''; });
-for (const id of ['fidelity', 'max-width', 'output-format']) $(id).addEventListener('change', invalidate);
+for (const id of ['fidelity', 'max-width', 'output-format', 'responsive']) $(id).addEventListener('change', invalidate);
 $('budget').addEventListener('input', () => { if (!state.busy) { allocate(); render(); } });
 $('transfer-count').addEventListener('input', renderSummary);
+$('return-rate').addEventListener('change', renderSummary);
+$('green-hosting').addEventListener('change', renderSummary);
+$('carbon-method').addEventListener('click', openMethod);
+$('folder-button').addEventListener('click', () => $('folder-input').click());
+$('folder-input').addEventListener('change', async event => { await addFiles(Array.from(event.target.files).filter(file => /\.(jpe?g|png|webp)$/i.test(file.name))); event.target.value = ''; });
 $('wipe-slider').addEventListener('input', event => { $('original-layer').style.clipPath = `inset(0 ${100 - Number(event.target.value)}% 0 0)`; $('wipe-line').style.left = `${event.target.value}%`; });
 $('single-download').addEventListener('click', () => {
   const entry = state.entries.find(item => item.id === state.active); const candidate = entry && chosen(entry);

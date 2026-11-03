@@ -130,3 +130,49 @@ test('sample credits survive in readable export instructions and the manifest', 
   assert.match(decoder.decode(unpacked.get('README.txt')), /NASA does not endorse/);
   assert.deepEqual(JSON.parse(decoder.decode(unpacked.get('manifest.json'))).settings.sampleAttribution, sampleAttribution);
 });
+
+function variant(width, bytes, mime = 'image/webp') {
+  return { width, height: width / 2, blob: new Blob([new Uint8Array(bytes)], { type: mime }), bytes: 999, mime, quality: 0.68, similarity: 0.98, keptOriginal: false };
+}
+
+test('responsive export contains exact variant hashes, srcset and separately counted storage', async () => {
+  const image = result('Hero,#.jpg', 'o'.repeat(100), 'p'.repeat(20));
+  image.relativePath = 'website/assets/Hero,#.jpg';
+  image.originalWidth = 2400; image.originalHeight = 1200;
+  image.candidates[0].width = 1920; image.candidates[0].height = 960;
+  image.variants = [variant(960, 8), variant(480, 3), variant(960, 7), variant(1920, 18), variant(3000, 30), variant(480, 2, 'image/jpeg')];
+  const unpacked = entries(new Uint8Array(await (await buildExport([image], [0], { responsive: true })).arrayBuffer()));
+  const manifest = JSON.parse(decoder.decode(unpacked.get('manifest.json')));
+  assert.equal(manifest.summary.outputBytes, 20);
+  assert.equal(manifest.summary.primaryOutputBytes, 20);
+  assert.equal(manifest.summary.additionalVariantBytes, 10);
+  assert.equal(manifest.summary.allImageBytes, 30);
+  assert.equal(manifest.summary.variantFiles, 2);
+  assert.equal(manifest.summary.savedBytes, 80);
+  assert.equal(manifest.images[0].input.relativePath, 'website/assets/Hero,#.jpg');
+  assert.deepEqual(manifest.images[0].variants.map(item => item.width), [480, 960]);
+  for (const item of manifest.images[0].variants) {
+    const data = unpacked.get(item.path);
+    assert.equal(item.bytes, data.length);
+    assert.equal(item.sha256, Buffer.from(await webcrypto.subtle.digest('SHA-256', data)).toString('hex'));
+  }
+  const html = decoder.decode(unpacked.get('index-snippets.html'));
+  assert.match(html, /<picture>/);
+  assert.match(html, /srcset="images\/Hero%2C%23-leafbyte-480w.webp 480w, images\/Hero%2C%23-leafbyte-960w.webp 960w, images\/Hero%2C%23-leafbyte.webp 1920w"/);
+  assert.match(html, /sizes="\(max-width: 1920px\) 100vw, 1920px"/);
+  assert.match(decoder.decode(unpacked.get('README.txt')), /Additional responsive files increase storage/);
+  assert.match(manifest.measurement.responsive, /Actual candidate selection and transferred bytes are not measured/);
+});
+
+test('choosing an unchanged original suppresses responsive files and srcset', async () => {
+  const image = result();
+  image.candidates[0] = { blob: image.file, keptOriginal: true, mime: 'image/jpeg', width: 1200, height: 800, similarity: 1, quality: null };
+  image.variants = [variant(480, 3), variant(960, 7)];
+  const unpacked = entries(new Uint8Array(await (await buildExport([image], [0])).arrayBuffer()));
+  const manifest = JSON.parse(decoder.decode(unpacked.get('manifest.json')));
+  assert.deepEqual(manifest.images[0].variants, []);
+  assert.equal(manifest.summary.additionalVariantBytes, 0);
+  assert.equal(manifest.summary.allImageBytes, image.file.size);
+  assert.equal([...unpacked.keys()].filter(name => name.startsWith('images/')).length, 1);
+  assert.doesNotMatch(decoder.decode(unpacked.get('index-snippets.html')), /srcset=/);
+});
