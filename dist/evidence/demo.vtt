@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:07.000
+This controlled page loads 7.09 MB of original image data.
+
+00:00:07.000 --> 00:00:14.000
+Same content and layout. LeafByte outputs reduce image data to 204 KB: 97.1% less.
+
+00:00:14.000 --> 00:00:22.000
+A second controlled page drops from 5.83 MB to 483 KB: 91.7% less image data.
+
+00:00:22.000 --> 00:00:32.000
+Choose a whole folder. This real batch contains 26 licensed photographs.
+
+00:00:32.000 --> 00:00:42.000
+Inspect actual output pixels. This laptop image goes from 1.99 MB to 20 KB at 800 px.
+
+00:00:42.000 --> 00:00:52.000
+Across 26 photos, the median file-size reduction is 92.4%, with resizing for web display.
+
+00:00:52.000 --> 00:01:04.000
+CO2.js / SWD v4 models the benefit under editable traffic, cache and hosting scenarios.
+
+00:01:04.000 --> 00:01:14.000
+For the first page, 10,000 hypothetical views imply a modelled 7.70–10.20 kg CO2e difference.
+
+00:01:14.000 --> 00:01:22.000
+Export usable images, responsive srcset, exact byte counts and SHA-256 hashes.
+
+00:01:22.000 --> 00:01:30.000
+Measured bytes. Explicit model assumptions. Reproducible evidence in the repository.

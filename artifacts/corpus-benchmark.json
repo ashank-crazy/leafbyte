@@ -1,0 +1,1756 @@
+{
+  "schema": "leafbyte-export-v1",
+  "generatedAt": "2026-11-03T07:11:05.218Z",
+  "settings": {
+    "maxWidth": 800,
+    "similarityFloor": 0.97,
+    "format": "image/webp",
+    "responsive": true,
+    "failures": [],
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "corpus": [
+      {
+        "name": "Laptop on a wooden desk",
+        "path": "benchmark-assets/01-laptop-desk.jpg",
+        "credit": "Alejandro Escamilla / Unsplash",
+        "source": "https://unsplash.com/photos/yC-Yzbqy7PY",
+        "download": "https://images.unsplash.com/flagged/1/apple-gear-looking-pretty.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "product",
+        "width": 5616,
+        "height": 3744,
+        "bytes": 1989373,
+        "sha256": "173135e7970e246706de6a3537be31625fcf347e4b9e567d9fbe1f5548293ce2",
+        "originalWidth": 5616,
+        "originalHeight": 3744,
+        "originalBytes": 1989373,
+        "originalSha256": "173135e7970e246706de6a3537be31625fcf347e4b9e567d9fbe1f5548293ce2",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Books and devices on a desk",
+        "path": "benchmark-assets/02-creative-workspace.jpg",
+        "credit": "Aleks Dorohovich / Unsplash",
+        "source": "https://unsplash.com/photos/nJdwUHmaY8A",
+        "download": "https://images.unsplash.com/3/doctype-hi-res.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "product",
+        "width": 3670,
+        "height": 2462,
+        "bytes": 1647999,
+        "sha256": "e43670ad389dbe8cba335da0d3168b27785151dce9c55c0c50719ed382f0393d",
+        "originalWidth": 3670,
+        "originalHeight": 2462,
+        "originalBytes": 1647999,
+        "originalSha256": "e43670ad389dbe8cba335da0d3168b27785151dce9c55c0c50719ed382f0393d",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Everyday accessories flat lay",
+        "path": "benchmark-assets/03-everyday-accessories.jpg",
+        "credit": "Vadim Sherbakov / Unsplash",
+        "source": "https://unsplash.com/photos/tCICLJ5ktBE",
+        "download": "https://images.unsplash.com/3/www.madebyvadim.com.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "product",
+        "width": 2000,
+        "height": 1316,
+        "bytes": 603580,
+        "sha256": "059a70b6b6e9a2be541393d31b9f67f8e68e1b05edcb915d7dfff49ec31dc873",
+        "originalWidth": 4209,
+        "originalHeight": 2769,
+        "originalBytes": 2487093,
+        "originalSha256": "6974e5d6bc1853d8b6dfeb3cbacdef0f2fd05d4e5cd90a4d8de625a89f4baf29",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Printed mug on a table",
+        "path": "benchmark-assets/04-printed-mug.jpg",
+        "credit": "Shyamanta Baruah / Unsplash",
+        "source": "https://unsplash.com/photos/aeVA-j1y2BY",
+        "download": "https://images.unsplash.com/4/cuba-cup.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "food-drink",
+        "width": 1280,
+        "height": 901,
+        "bytes": 182597,
+        "sha256": "a5e84ad063d3695a2d1fc01f3d94a820cfc0ecdcf3343b4dec218cfe445f70cc",
+        "originalWidth": 1280,
+        "originalHeight": 901,
+        "originalBytes": 182597,
+        "originalSha256": "a5e84ad063d3695a2d1fc01f3d94a820cfc0ecdcf3343b4dec218cfe445f70cc",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Disassembled camera components",
+        "path": "benchmark-assets/05-camera-components.jpg",
+        "credit": "Vadim Sherbakov / Unsplash",
+        "source": "https://unsplash.com/photos/osSryggkso4",
+        "download": "https://images.unsplash.com/4/madebyvadim.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "product",
+        "width": 4179,
+        "height": 2790,
+        "bytes": 2040465,
+        "sha256": "d28710fb317c9f5121ca9197860ca4dbb4459121cf29a0abdc3226e4a910bc36",
+        "originalWidth": 4179,
+        "originalHeight": 2790,
+        "originalBytes": 2040465,
+        "originalSha256": "d28710fb317c9f5121ca9197860ca4dbb4459121cf29a0abdc3226e4a910bc36",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Cat nose close-up",
+        "path": "benchmark-assets/06-cat-closeup.jpg",
+        "credit": "Ryan McGuire / Unsplash",
+        "source": "https://unsplash.com/photos/N-1XGL54pQg",
+        "download": "https://images.unsplash.com/5/nose-up.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "animal",
+        "width": 2000,
+        "height": 1367,
+        "bytes": 590860,
+        "sha256": "4cadb155a1d44df8da5c67a7cbc238f621cf90aa8f0a8ad49a7645b55b9b5142",
+        "originalWidth": 4106,
+        "originalHeight": 2806,
+        "originalBytes": 2636787,
+        "originalSha256": "4ee0fd620238cc968f3a399829c86c04af6838eaf2319a25677f4bc0eff7c955",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Water droplets on glass",
+        "path": "benchmark-assets/07-water-droplets.jpg",
+        "credit": "Nithya Ramanujam / Unsplash",
+        "source": "https://unsplash.com/photos/fTKetYpEKNQ",
+        "download": "https://images.unsplash.com/5/rain.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "texture",
+        "width": 1280,
+        "height": 805,
+        "bytes": 152985,
+        "sha256": "9090472b29c461a2aceee34af8c9cc0be68fd23f8faf52ce39a263c5ab68405d",
+        "originalWidth": 1280,
+        "originalHeight": 805,
+        "originalBytes": 152985,
+        "originalSha256": "9090472b29c461a2aceee34af8c9cc0be68fd23f8faf52ce39a263c5ab68405d",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Coffee in a cafe interior",
+        "path": "benchmark-assets/08-cafe-interior.jpg",
+        "credit": "Luke Chesser / Unsplash",
+        "source": "https://unsplash.com/photos/KR2mdHJ5qMg",
+        "download": "https://images.unsplash.com/5/unsplash-bonus.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "interior",
+        "width": 3456,
+        "height": 2304,
+        "bytes": 702968,
+        "sha256": "33845a93d4dc652968f2bb853cce65fc5c26fa1914ccd0a2b6636f4ff2d55dba",
+        "originalWidth": 3456,
+        "originalHeight": 2304,
+        "originalBytes": 702968,
+        "originalSha256": "33845a93d4dc652968f2bb853cce65fc5c26fa1914ccd0a2b6636f4ff2d55dba",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "City skyline at night in monochrome",
+        "path": "benchmark-assets/09-city-night-monochrome.jpg",
+        "credit": "Oleg Chursin / Unsplash",
+        "source": "https://unsplash.com/photos/IoCWq07GaG4",
+        "download": "https://images.unsplash.com/5/night-city.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "architecture",
+        "width": 1280,
+        "height": 831,
+        "bytes": 248356,
+        "sha256": "db4c70c0b37371e1c02301fb32167a2337a6a4265ae7c0df51dd599281125d77",
+        "originalWidth": 1280,
+        "originalHeight": 831,
+        "originalBytes": 248356,
+        "originalSha256": "db4c70c0b37371e1c02301fb32167a2337a6a4265ae7c0df51dd599281125d77",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "White coastal buildings",
+        "path": "benchmark-assets/10-white-buildings.jpg",
+        "credit": "Margaret Barley / Unsplash",
+        "source": "https://unsplash.com/photos/Qo51KwK1dKg",
+        "download": "https://images.unsplash.com/5/greece-2.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "architecture",
+        "width": 1280,
+        "height": 792,
+        "bytes": 162187,
+        "sha256": "398ee105ce016ab19abf6de4d93a2254405aed5a031299c4f526f66d1e9f1cb6",
+        "originalWidth": 1280,
+        "originalHeight": 792,
+        "originalBytes": 162187,
+        "originalSha256": "398ee105ce016ab19abf6de4d93a2254405aed5a031299c4f526f66d1e9f1cb6",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Bird on a rope by a boat",
+        "path": "benchmark-assets/11-bird-on-rope.jpg",
+        "credit": "Tyler Wanlass / Unsplash",
+        "source": "https://unsplash.com/photos/L7MpmBGpM94",
+        "download": "https://images.unsplash.com/6/Bird-Profile-Wellington-New-Zealand.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "animal",
+        "width": 4608,
+        "height": 3072,
+        "bytes": 3036897,
+        "sha256": "4233ed88bf7b7d40610a2e7f9b8ca0aedeaab5a5a05b43338abc160268af0b30",
+        "originalWidth": 4608,
+        "originalHeight": 3072,
+        "originalBytes": 3036897,
+        "originalSha256": "4233ed88bf7b7d40610a2e7f9b8ca0aedeaab5a5a05b43338abc160268af0b30",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Ocean shore in monochrome",
+        "path": "benchmark-assets/12-ocean-monochrome.jpg",
+        "credit": "Ireneuilia / Unsplash",
+        "source": "https://unsplash.com/photos/knYQ6arClBE",
+        "download": "https://images.unsplash.com/6/gnarly.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "landscape",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 596322,
+        "sha256": "7a36fba7a84c6c480c7f02e7151f6fddcc01cfe622cf9c57eb4240b5754b1cee",
+        "originalWidth": 5163,
+        "originalHeight": 3442,
+        "originalBytes": 5101424,
+        "originalSha256": "53059107dc738416cc62cee8d10cf1280097778f2f551371cd17a22047437170",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Rocky peak beneath clouds",
+        "path": "benchmark-assets/13-mountain-clouds.jpg",
+        "credit": "Nicholas Swanson / Unsplash",
+        "source": "https://unsplash.com/photos/d19by2PLaPc",
+        "download": "https://images.unsplash.com/6/mountain.JPG",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "landscape",
+        "width": 3264,
+        "height": 2176,
+        "bytes": 1263623,
+        "sha256": "45ed9b23501e0810b6c57fb258d47a0860252c5a645961ebea6c65a30c57dacb",
+        "originalWidth": 3264,
+        "originalHeight": 2176,
+        "originalBytes": 1263623,
+        "originalSha256": "45ed9b23501e0810b6c57fb258d47a0860252c5a645961ebea6c65a30c57dacb",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Young leaves beside weathered wood",
+        "path": "benchmark-assets/14-new-plant.jpg",
+        "credit": "Tyler Wanlass / Unsplash",
+        "source": "https://unsplash.com/photos/akbHiqZy4Pg",
+        "download": "https://images.unsplash.com/6/New-Life.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "plant",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 1113915,
+        "sha256": "a8f15a9e75ea943aa75eb3b1fc497db70b9ffcd248a850317ecaf14442ed425e",
+        "originalWidth": 4608,
+        "originalHeight": 3072,
+        "originalBytes": 4514814,
+        "originalSha256": "595061e23dd90075f73f9fac6c5261da3240fc3eadfc1679408e219d331c7eb2",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Coffee cup against red",
+        "path": "benchmark-assets/15-coffee-red.jpg",
+        "credit": "Justin Leibow / Unsplash",
+        "source": "https://unsplash.com/photos/ZJsseAxEcqM",
+        "download": "https://images.unsplash.com/7/color-correct-coffee.JPG",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "food-drink",
+        "width": 5422,
+        "height": 3050,
+        "bytes": 622883,
+        "sha256": "0af4bfd54dc6d7c1bfab71591a0162db0a53ea89c37d4e70baaf372c6dcfb1e1",
+        "originalWidth": 5422,
+        "originalHeight": 3050,
+        "originalBytes": 622883,
+        "originalSha256": "0af4bfd54dc6d7c1bfab71591a0162db0a53ea89c37d4e70baaf372c6dcfb1e1",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Abandoned railway tracks",
+        "path": "benchmark-assets/16-railway-tracks.jpg",
+        "credit": "Alexander Shustov / Unsplash",
+        "source": "https://unsplash.com/photos/SITaCHf7jjg",
+        "download": "https://images.unsplash.com/7/tracks.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "infrastructure",
+        "width": 2000,
+        "height": 1329,
+        "bytes": 441346,
+        "sha256": "56ac8a22d7274ad8680970f2d948b3fdb857de1eb13015cf5f69edb92c86bdff",
+        "originalWidth": 4912,
+        "originalHeight": 3264,
+        "originalBytes": 1744854,
+        "originalSha256": "3a58f138c2645e07e87ad7d51f8c83a6321fe67e7e93cd18c12b64b363dc5075",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Foggy country road",
+        "path": "benchmark-assets/17-foggy-road.jpg",
+        "credit": "Dorothy Lin / Unsplash",
+        "source": "https://unsplash.com/photos/OokBLPrkCNk",
+        "download": "https://images.unsplash.com/8/carmel.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "landscape",
+        "width": 3011,
+        "height": 2000,
+        "bytes": 1545585,
+        "sha256": "8eb8638b1e9b6e84116b4a16472a7a97b7ac19d853df3ec6310395f135b75d15",
+        "originalWidth": 3011,
+        "originalHeight": 2000,
+        "originalBytes": 1545585,
+        "originalSha256": "8eb8638b1e9b6e84116b4a16472a7a97b7ac19d853df3ec6310395f135b75d15",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Swing beside a lake",
+        "path": "benchmark-assets/18-lakeside-swing.jpg",
+        "credit": "Jon Eckert / Unsplash",
+        "source": "https://unsplash.com/photos/IoIbdFdGCnQ",
+        "download": "https://images.unsplash.com/8/lighthousemorning.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "landscape",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 1189628,
+        "sha256": "f11b80407b622b2ad6056638b534551c81abf756ccbeda503c10240e43928eb5",
+        "originalWidth": 5184,
+        "originalHeight": 3456,
+        "originalBytes": 3336487,
+        "originalSha256": "dc16dc78324286d1211880ff87f8fdcac3da842f7b5ec309de72ac5209cf0a50",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Baseball inside a leather glove",
+        "path": "benchmark-assets/19-baseball-glove.jpg",
+        "credit": "Jon Eckert / Unsplash",
+        "source": "https://unsplash.com/photos/umLpP7uCZs0",
+        "download": "https://images.unsplash.com/8/playball.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "product",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 460499,
+        "sha256": "164c1d120b1aecac842e0f2fc82aefa94cc71690a7a6c646c2906a2796792332",
+        "originalWidth": 5184,
+        "originalHeight": 3456,
+        "originalBytes": 3231568,
+        "originalSha256": "268f93787fd8b15f6e3890f3705746bdf6d8a336bac2ca53f95bbd9c7c5fe032",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Wooden pier over calm water",
+        "path": "benchmark-assets/20-sea-pier.jpg",
+        "credit": "May Pamintuan / Unsplash",
+        "source": "https://unsplash.com/photos/j9nfqTi5T5o",
+        "download": "https://images.unsplash.com/8/maldives.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "landscape",
+        "width": 1631,
+        "height": 1102,
+        "bytes": 573883,
+        "sha256": "4c5d4452dbfc16067ef225327fa69d2be3d346c6b09d728b07558b229ba6320f",
+        "originalWidth": 1631,
+        "originalHeight": 1102,
+        "originalBytes": 573883,
+        "originalSha256": "4c5d4452dbfc16067ef225327fa69d2be3d346c6b09d728b07558b229ba6320f",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Forest in late light",
+        "path": "benchmark-assets/21-forest-dusk.jpg",
+        "credit": "Julie Geiger / Unsplash",
+        "source": "https://unsplash.com/photos/dYshDcTI1Js",
+        "download": "https://images.unsplash.com/9/DeepInTheForest_cre8art4life_JulieGeiger.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "landscape",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 657047,
+        "sha256": "e3da184cded464ff050bd2ca76e21ebb593f8cc395081d4591da7de164bebd7c",
+        "originalWidth": 2560,
+        "originalHeight": 1920,
+        "originalBytes": 657047,
+        "originalSha256": "e3da184cded464ff050bd2ca76e21ebb593f8cc395081d4591da7de164bebd7c",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Illuminated bridge at night",
+        "path": "benchmark-assets/22-bridge-night.jpg",
+        "credit": "Johnny Lam / Unsplash",
+        "source": "https://unsplash.com/photos/63qfL0TciY8",
+        "download": "https://images.unsplash.com/9/johnny-lam-connect.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "architecture",
+        "width": 1280,
+        "height": 848,
+        "bytes": 149344,
+        "sha256": "3d7cf48a4b9e276d6c354d6ab19a51c71db8f1852240030063eb71987560c001",
+        "originalWidth": 1280,
+        "originalHeight": 848,
+        "originalBytes": 149344,
+        "originalSha256": "3d7cf48a4b9e276d6c354d6ab19a51c71db8f1852240030063eb71987560c001",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Aerial view of city traffic",
+        "path": "benchmark-assets/23-city-traffic.jpg",
+        "credit": "Barcelona / Unsplash",
+        "source": "https://unsplash.com/photos/muC_6gTMLR4",
+        "download": "https://images.unsplash.com/9/barcelona-traffic.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "infrastructure",
+        "width": 1280,
+        "height": 1707,
+        "bytes": 452355,
+        "sha256": "556255118141be717e8679703b28ccdc282189265d57e50658e474698a83f9fa",
+        "originalWidth": 1280,
+        "originalHeight": 1707,
+        "originalBytes": 452355,
+        "originalSha256": "556255118141be717e8679703b28ccdc282189265d57e50658e474698a83f9fa",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Backlit grass close-up",
+        "path": "benchmark-assets/24-grass-backlight.jpg",
+        "credit": "Vectorbeast / Unsplash",
+        "source": "https://unsplash.com/photos/rsJtMXn3p_c",
+        "download": "https://images.unsplash.com/9/vectorbeastcom-grass-sun.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "plant",
+        "width": 2000,
+        "height": 1125,
+        "bytes": 417545,
+        "sha256": "faa17a86e7f85a1ec550a61ba0c0882108752902212290f9568999c25afbff3c",
+        "originalWidth": 4608,
+        "originalHeight": 2592,
+        "originalBytes": 1699565,
+        "originalSha256": "9f3ae072a5f501b0efd0c5b46f9fdead0d152325d4b742f34d15a7a12cd12fa8",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Barley and wheat close-up",
+        "path": "benchmark-assets/25-barley-wheat.jpg",
+        "credit": "Laurice Manaligod / Unsplash",
+        "source": "https://unsplash.com/photos/ThJIf6Q0b2s",
+        "download": "https://images.unsplash.com/10/fields.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "plant",
+        "width": 3264,
+        "height": 2176,
+        "bytes": 663443,
+        "sha256": "e095ec6165dda9eb48e07c976f404d13c7fd90a9d3fb01fbfea92340776fbf32",
+        "originalWidth": 3264,
+        "originalHeight": 2176,
+        "originalBytes": 663443,
+        "originalSha256": "e095ec6165dda9eb48e07c976f404d13c7fd90a9d3fb01fbfea92340776fbf32",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      },
+      {
+        "name": "Weathered wooden wagon",
+        "path": "benchmark-assets/26-wooden-wagon.jpg",
+        "credit": "Jon Toney / Unsplash",
+        "source": "https://unsplash.com/photos/xyDQNmT6vSs",
+        "download": "https://images.unsplash.com/10/wheels.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "texture",
+        "width": 2000,
+        "height": 1329,
+        "bytes": 417761,
+        "sha256": "6c2f0da3e3de337041f7120869dff66de7bb8bba1cd15f88417a2b0a08c21292",
+        "originalWidth": 4912,
+        "originalHeight": 3264,
+        "originalBytes": 1709505,
+        "originalSha256": "497519d1db2655c939998d0c4cb759e35c97c16de2ee5ecf7b31a4640323d97a",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date."
+      }
+    ],
+    "corpusNote": "Licensed web-image demonstration corpus; not a representative sample of the whole web."
+  },
+  "summary": {
+    "images": 26,
+    "inputBytes": 21923446,
+    "outputBytes": 1459700,
+    "primaryOutputBytes": 1459700,
+    "additionalVariantBytes": 514900,
+    "allImageBytes": 1974600,
+    "variantFiles": 26,
+    "savedBytes": 20463746,
+    "savedPercent": 93.34183138909823
+  },
+  "measurement": {
+    "bytes": "Exact file lengths, excluding ZIP overhead and generated documentation. outputBytes and primaryOutputBytes count only selected primary images. additionalVariantBytes counts smaller responsive files. allImageBytes is the actual combined image storage in this archive. savedBytes and savedPercent compare source files with primary outputs only; they are not total archive storage savings.",
+    "similarity": "Encoded candidates use mean local luminance SSIM in non-overlapping 8 \u00d7 8 blocks across nine native-resolution patches up to 128 \u00d7 128 pixels, positioned at left/center/right by top/middle/bottom. Patches are not downsampled and can overlap on small images. The original is first resampled to the output dimensions. RGBA samples are composited on white. Retained originals receive 1 by file identity. This does not measure resolution loss against the full original and can miss color shifts or artifacts outside the patches. It is not a guarantee of perceptual equivalence, legibility, color fidelity or accessibility. Inspect the images yourself.",
+    "savings": "Output file reduction only. Storage or transfer benefits require using these files instead of the originals. Cache behavior, repeat visits and encoding overhead are not measured.",
+    "responsive": "Responsive variants are additional stored files. The browser chooses among srcset candidates using layout size, pixel density and browser behavior; it does not ordinarily download every variant for one image. Supplied sizes assume full viewport width up to the primary image width and must be adapted to the website layout. Actual candidate selection and transferred bytes are not measured. Original selections omit variants. Folder-relative input paths are recorded for mapping; exported filenames are flattened and deduplicated.",
+    "environment": "Electricity, water consumption, avoided emissions and total environmental impact have not been measured. Traffic scenarios, if shown in the app, are hypothetical.",
+    "hashes": "SHA-256 of each original input file and each exact exported output file."
+  },
+  "images": [
+    {
+      "input": {
+        "name": "01-laptop-desk.jpg",
+        "relativePath": "01-laptop-desk.jpg",
+        "bytes": 1989373,
+        "width": 5616,
+        "height": 3744,
+        "mime": "image/jpeg",
+        "sha256": "173135e7970e246706de6a3537be31625fcf347e4b9e567d9fbe1f5548293ce2"
+      },
+      "output": {
+        "path": "images/01-laptop-desk-leafbyte.webp",
+        "bytes": 20004,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "696899c56a8498d6ead73d7741c17c562d23bf156cd21a8b61d91f9ecd44cb1d"
+      },
+      "variants": [
+        {
+          "path": "images/01-laptop-desk-leafbyte-480w.webp",
+          "bytes": 12328,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "f9f67b58b406d8bb58975c127db653b54853b2241e5ffad120a9a9a709fa3d23",
+          "encoderQuality": 0.76,
+          "sampledSimilarity": 0.9757099938945727
+        }
+      ],
+      "selectedCandidate": 5,
+      "encoderQuality": 0.6,
+      "sampledSimilarity": 0.9716829667944284,
+      "keptOriginal": false,
+      "savedBytes": 1969369,
+      "savedPercent": 98.994457047522,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 550.6999999880791
+    },
+    {
+      "input": {
+        "name": "02-creative-workspace.jpg",
+        "relativePath": "02-creative-workspace.jpg",
+        "bytes": 1647999,
+        "width": 3670,
+        "height": 2462,
+        "mime": "image/jpeg",
+        "sha256": "e43670ad389dbe8cba335da0d3168b27785151dce9c55c0c50719ed382f0393d"
+      },
+      "output": {
+        "path": "images/02-creative-workspace-leafbyte.webp",
+        "bytes": 27152,
+        "width": 800,
+        "height": 537,
+        "mime": "image/webp",
+        "sha256": "96bb16e305a817f789c2c3cc9d5ebdb99736f67d4bbb13c559aff526a3c33a67"
+      },
+      "variants": [
+        {
+          "path": "images/02-creative-workspace-leafbyte-480w.webp",
+          "bytes": 15080,
+          "width": 480,
+          "height": 322,
+          "mime": "image/webp",
+          "sha256": "d3c71ee7fe69df7493ee85307427327f193850de3019d56b5ff70d68cf938641",
+          "encoderQuality": 0.76,
+          "sampledSimilarity": 0.9746231942881551
+        }
+      ],
+      "selectedCandidate": 4,
+      "encoderQuality": 0.68,
+      "sampledSimilarity": 0.9710674359207248,
+      "keptOriginal": false,
+      "savedBytes": 1620847,
+      "savedPercent": 98.35242618472464,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 401.5
+    },
+    {
+      "input": {
+        "name": "03-everyday-accessories.jpg",
+        "relativePath": "03-everyday-accessories.jpg",
+        "bytes": 603580,
+        "width": 2000,
+        "height": 1316,
+        "mime": "image/jpeg",
+        "sha256": "059a70b6b6e9a2be541393d31b9f67f8e68e1b05edcb915d7dfff49ec31dc873"
+      },
+      "output": {
+        "path": "images/03-everyday-accessories-leafbyte.webp",
+        "bytes": 82054,
+        "width": 800,
+        "height": 526,
+        "mime": "image/webp",
+        "sha256": "26a70afe9183c5579c96fd6e9616e537cb1d1a69bab14a69155f466b77d2b124"
+      },
+      "variants": [
+        {
+          "path": "images/03-everyday-accessories-leafbyte-480w.webp",
+          "bytes": 26504,
+          "width": 480,
+          "height": 316,
+          "mime": "image/webp",
+          "sha256": "6c9f0b110a17fcd053c78b01ff4b15fe16e141b768ea1f4587d65239ded2f0a2",
+          "encoderQuality": 0.92,
+          "sampledSimilarity": 0.9764175381441886
+        }
+      ],
+      "selectedCandidate": 1,
+      "encoderQuality": 0.92,
+      "sampledSimilarity": 0.9724384940525286,
+      "keptOriginal": false,
+      "savedBytes": 521526,
+      "savedPercent": 86.4054474966036,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 274.39999997615814
+    },
+    {
+      "input": {
+        "name": "04-printed-mug.jpg",
+        "relativePath": "04-printed-mug.jpg",
+        "bytes": 182597,
+        "width": 1280,
+        "height": 901,
+        "mime": "image/jpeg",
+        "sha256": "a5e84ad063d3695a2d1fc01f3d94a820cfc0ecdcf3343b4dec218cfe445f70cc"
+      },
+      "output": {
+        "path": "images/04-printed-mug-leafbyte.webp",
+        "bytes": 39756,
+        "width": 800,
+        "height": 563,
+        "mime": "image/webp",
+        "sha256": "f958d617643bde946b04761d317a8e4ccce3c6de7dac6f40fff6842bb5130377"
+      },
+      "variants": [
+        {
+          "path": "images/04-printed-mug-leafbyte-480w.webp",
+          "bytes": 13432,
+          "width": 480,
+          "height": 338,
+          "mime": "image/webp",
+          "sha256": "41d6cc983f145afddafc8b5094522b4b525234c835f13ed18ba3e81500bf6c1a",
+          "encoderQuality": 0.76,
+          "sampledSimilarity": 0.9716107737531536
+        }
+      ],
+      "selectedCandidate": 2,
+      "encoderQuality": 0.84,
+      "sampledSimilarity": 0.9732530211003022,
+      "keptOriginal": false,
+      "savedBytes": 142841,
+      "savedPercent": 78.22746266368013,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 285.19999998807907
+    },
+    {
+      "input": {
+        "name": "05-camera-components.jpg",
+        "relativePath": "05-camera-components.jpg",
+        "bytes": 2040465,
+        "width": 4179,
+        "height": 2790,
+        "mime": "image/jpeg",
+        "sha256": "d28710fb317c9f5121ca9197860ca4dbb4459121cf29a0abdc3226e4a910bc36"
+      },
+      "output": {
+        "path": "images/05-camera-components-leafbyte.webp",
+        "bytes": 30514,
+        "width": 800,
+        "height": 534,
+        "mime": "image/webp",
+        "sha256": "e946e18d9b2fce59ae24e959837ae67e7af669c5471b650deea2844fb34ee9eb"
+      },
+      "variants": [
+        {
+          "path": "images/05-camera-components-leafbyte-480w.webp",
+          "bytes": 12424,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "01ad40aa0dc722714ce2084a00e8bc4638f9bbfde1cc061f934e27f8732c17ae",
+          "encoderQuality": 0.68,
+          "sampledSimilarity": 0.9720717590136118
+        }
+      ],
+      "selectedCandidate": 3,
+      "encoderQuality": 0.76,
+      "sampledSimilarity": 0.9723393194065587,
+      "keptOriginal": false,
+      "savedBytes": 2009951,
+      "savedPercent": 98.50455655941171,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 430
+    },
+    {
+      "input": {
+        "name": "06-cat-closeup.jpg",
+        "relativePath": "06-cat-closeup.jpg",
+        "bytes": 590860,
+        "width": 2000,
+        "height": 1367,
+        "mime": "image/jpeg",
+        "sha256": "4cadb155a1d44df8da5c67a7cbc238f621cf90aa8f0a8ad49a7645b55b9b5142"
+      },
+      "output": {
+        "path": "images/06-cat-closeup-leafbyte.webp",
+        "bytes": 33072,
+        "width": 800,
+        "height": 547,
+        "mime": "image/webp",
+        "sha256": "90f71903ae878c350f362213bc8bfa61d3e5ce20a178ad66cfa0de6d555070c8"
+      },
+      "variants": [
+        {
+          "path": "images/06-cat-closeup-leafbyte-480w.webp",
+          "bytes": 15178,
+          "width": 480,
+          "height": 328,
+          "mime": "image/webp",
+          "sha256": "b26fbc8f77148718f97fd0c8d5f00b55507beb63f95e83c29c18a145865b1ac7",
+          "encoderQuality": 0.68,
+          "sampledSimilarity": 0.970471812144804
+        }
+      ],
+      "selectedCandidate": 4,
+      "encoderQuality": 0.68,
+      "sampledSimilarity": 0.9701444926357475,
+      "keptOriginal": false,
+      "savedBytes": 557788,
+      "savedPercent": 94.40273499644586,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 311.09999999403954
+    },
+    {
+      "input": {
+        "name": "07-water-droplets.jpg",
+        "relativePath": "07-water-droplets.jpg",
+        "bytes": 152985,
+        "width": 1280,
+        "height": 805,
+        "mime": "image/jpeg",
+        "sha256": "9090472b29c461a2aceee34af8c9cc0be68fd23f8faf52ce39a263c5ab68405d"
+      },
+      "output": {
+        "path": "images/07-water-droplets-leafbyte.webp",
+        "bytes": 25224,
+        "width": 800,
+        "height": 503,
+        "mime": "image/webp",
+        "sha256": "cef50ff5b5d8e619cc0a9376cc9726eeba531a8f6f79181113e90af5ea5705f1"
+      },
+      "variants": [
+        {
+          "path": "images/07-water-droplets-leafbyte-480w.webp",
+          "bytes": 12454,
+          "width": 480,
+          "height": 302,
+          "mime": "image/webp",
+          "sha256": "f148889bee7a5f06a4441f725f75da95bf1cd309e65be2c27d1cb78ae839a416",
+          "encoderQuality": 0.6,
+          "sampledSimilarity": 0.9727490801178862
+        }
+      ],
+      "selectedCandidate": 4,
+      "encoderQuality": 0.68,
+      "sampledSimilarity": 0.972399334821307,
+      "keptOriginal": false,
+      "savedBytes": 127761,
+      "savedPercent": 83.51210903029708,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 276.90000000596046
+    },
+    {
+      "input": {
+        "name": "08-cafe-interior.jpg",
+        "relativePath": "08-cafe-interior.jpg",
+        "bytes": 702968,
+        "width": 3456,
+        "height": 2304,
+        "mime": "image/jpeg",
+        "sha256": "33845a93d4dc652968f2bb853cce65fc5c26fa1914ccd0a2b6636f4ff2d55dba"
+      },
+      "output": {
+        "path": "images/08-cafe-interior-leafbyte.webp",
+        "bytes": 18436,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "63b71a1a8c4f7981871ebbd47c4f787af28978a79a729074b7de2b5758d7d217"
+      },
+      "variants": [
+        {
+          "path": "images/08-cafe-interior-leafbyte-480w.webp",
+          "bytes": 11812,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "9663af94ab8d4324fdf3c65d1d72082e8701c3be58e2471dd2885bb400bc597d",
+          "encoderQuality": 0.76,
+          "sampledSimilarity": 0.9720156619413269
+        }
+      ],
+      "selectedCandidate": 5,
+      "encoderQuality": 0.6,
+      "sampledSimilarity": 0.9713050039954096,
+      "keptOriginal": false,
+      "savedBytes": 684532,
+      "savedPercent": 97.37740551490252,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 341.09999999403954
+    },
+    {
+      "input": {
+        "name": "09-city-night-monochrome.jpg",
+        "relativePath": "09-city-night-monochrome.jpg",
+        "bytes": 248356,
+        "width": 1280,
+        "height": 831,
+        "mime": "image/jpeg",
+        "sha256": "db4c70c0b37371e1c02301fb32167a2337a6a4265ae7c0df51dd599281125d77"
+      },
+      "output": {
+        "path": "images/09-city-night-monochrome-leafbyte.webp",
+        "bytes": 65918,
+        "width": 800,
+        "height": 519,
+        "mime": "image/webp",
+        "sha256": "0b84c8f5ba9ed68d463cc58c4d6afd8508b5fd3c430917a854e92e4278f6d54f"
+      },
+      "variants": [
+        {
+          "path": "images/09-city-night-monochrome-leafbyte-480w.webp",
+          "bytes": 15020,
+          "width": 480,
+          "height": 312,
+          "mime": "image/webp",
+          "sha256": "c18d9d2d68c6e86797dda59bd2441991511bf8bf20ee384b76d229e2d2242b27",
+          "encoderQuality": 0.68,
+          "sampledSimilarity": 0.9706942888213721
+        }
+      ],
+      "selectedCandidate": 2,
+      "encoderQuality": 0.84,
+      "sampledSimilarity": 0.974116132196563,
+      "keptOriginal": false,
+      "savedBytes": 182438,
+      "savedPercent": 73.45826152780685,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 309.5
+    },
+    {
+      "input": {
+        "name": "10-white-buildings.jpg",
+        "relativePath": "10-white-buildings.jpg",
+        "bytes": 162187,
+        "width": 1280,
+        "height": 792,
+        "mime": "image/jpeg",
+        "sha256": "398ee105ce016ab19abf6de4d93a2254405aed5a031299c4f526f66d1e9f1cb6"
+      },
+      "output": {
+        "path": "images/10-white-buildings-leafbyte.webp",
+        "bytes": 20546,
+        "width": 800,
+        "height": 495,
+        "mime": "image/webp",
+        "sha256": "518c9faaf29c3442190e85ed090e15a2f05fdb0e31bccd4f1dbe94b8eb9fba31"
+      },
+      "variants": [
+        {
+          "path": "images/10-white-buildings-leafbyte-480w.webp",
+          "bytes": 9946,
+          "width": 480,
+          "height": 297,
+          "mime": "image/webp",
+          "sha256": "080ab8af418ee4474fc90f614e4d1ea8d2a0dccdf4dd009c076104efc777145e",
+          "encoderQuality": 0.52,
+          "sampledSimilarity": 0.975139157880604
+        }
+      ],
+      "selectedCandidate": 6,
+      "encoderQuality": 0.52,
+      "sampledSimilarity": 0.9720686460436662,
+      "keptOriginal": false,
+      "savedBytes": 141641,
+      "savedPercent": 87.33190699624508,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 249.59999999403954
+    },
+    {
+      "input": {
+        "name": "11-bird-on-rope.jpg",
+        "relativePath": "11-bird-on-rope.jpg",
+        "bytes": 3036897,
+        "width": 4608,
+        "height": 3072,
+        "mime": "image/jpeg",
+        "sha256": "4233ed88bf7b7d40610a2e7f9b8ca0aedeaab5a5a05b43338abc160268af0b30"
+      },
+      "output": {
+        "path": "images/11-bird-on-rope-leafbyte.webp",
+        "bytes": 126502,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "e772f6ca24a886ddf45250119a5f7fd2e61f9ad2a2d2b3447e0b0ee514c65582"
+      },
+      "variants": [
+        {
+          "path": "images/11-bird-on-rope-leafbyte-480w.webp",
+          "bytes": 45602,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "51a95d9c2926d1468b48eb12c16da062fb1fe13d702220feed327dbdcb040a8f",
+          "encoderQuality": 0.92,
+          "sampledSimilarity": 0.9866031116864605
+        }
+      ],
+      "selectedCandidate": 1,
+      "encoderQuality": 0.92,
+      "sampledSimilarity": 0.9857810084452091,
+      "keptOriginal": false,
+      "savedBytes": 2910395,
+      "savedPercent": 95.8344981736292,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 566.1999999880791
+    },
+    {
+      "input": {
+        "name": "12-ocean-monochrome.jpg",
+        "relativePath": "12-ocean-monochrome.jpg",
+        "bytes": 596322,
+        "width": 2000,
+        "height": 1333,
+        "mime": "image/jpeg",
+        "sha256": "7a36fba7a84c6c480c7f02e7151f6fddcc01cfe622cf9c57eb4240b5754b1cee"
+      },
+      "output": {
+        "path": "images/12-ocean-monochrome-leafbyte.webp",
+        "bytes": 47988,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "8701223305b790a79eeb7b73fa091c0190ba5141fe4e37b83b3b62c71551c5bf"
+      },
+      "variants": [
+        {
+          "path": "images/12-ocean-monochrome-leafbyte-480w.webp",
+          "bytes": 19156,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "90cd489336040d5eb88e413705f33f7c6a3755f65190924b6ca78d2e46eec753",
+          "encoderQuality": 0.84,
+          "sampledSimilarity": 0.9762879502639843
+        }
+      ],
+      "selectedCandidate": 2,
+      "encoderQuality": 0.84,
+      "sampledSimilarity": 0.9711980007194728,
+      "keptOriginal": false,
+      "savedBytes": 548334,
+      "savedPercent": 91.9526698662803,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 304
+    },
+    {
+      "input": {
+        "name": "13-mountain-clouds.jpg",
+        "relativePath": "13-mountain-clouds.jpg",
+        "bytes": 1263623,
+        "width": 3264,
+        "height": 2176,
+        "mime": "image/jpeg",
+        "sha256": "45ed9b23501e0810b6c57fb258d47a0860252c5a645961ebea6c65a30c57dacb"
+      },
+      "output": {
+        "path": "images/13-mountain-clouds-leafbyte.webp",
+        "bytes": 49676,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "6eee5ffc35165bcabde1e869dc7655e07598ce751174eb50eacc7066fc715049"
+      },
+      "variants": [
+        {
+          "path": "images/13-mountain-clouds-leafbyte-480w.webp",
+          "bytes": 17908,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "302318115a85f775815d896b533fa139e64337a7820fdc8810ff2002bbf0fb75",
+          "encoderQuality": 0.76,
+          "sampledSimilarity": 0.9715288778830516
+        }
+      ],
+      "selectedCandidate": 2,
+      "encoderQuality": 0.84,
+      "sampledSimilarity": 0.9735144685931557,
+      "keptOriginal": false,
+      "savedBytes": 1213947,
+      "savedPercent": 96.06876418045573,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 396.5
+    },
+    {
+      "input": {
+        "name": "14-new-plant.jpg",
+        "relativePath": "14-new-plant.jpg",
+        "bytes": 1113915,
+        "width": 2000,
+        "height": 1333,
+        "mime": "image/jpeg",
+        "sha256": "a8f15a9e75ea943aa75eb3b1fc497db70b9ffcd248a850317ecaf14442ed425e"
+      },
+      "output": {
+        "path": "images/14-new-plant-leafbyte.webp",
+        "bytes": 135712,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "38875de83e2d756f7fec3eefd24e4a585008c723d6ad57c63567d6ebfbcce9b9"
+      },
+      "variants": [
+        {
+          "path": "images/14-new-plant-leafbyte-480w.webp",
+          "bytes": 30704,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "b9ae7de4c6ebf3ecbc0f2f1ff6359f2675bf0b58288043f309d70327e6bfbc28",
+          "encoderQuality": 0.84,
+          "sampledSimilarity": 0.974035138021708
+        }
+      ],
+      "selectedCandidate": 1,
+      "encoderQuality": 0.92,
+      "sampledSimilarity": 0.9825733628790567,
+      "keptOriginal": false,
+      "savedBytes": 978203,
+      "savedPercent": 87.81666464676388,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 360
+    },
+    {
+      "input": {
+        "name": "15-coffee-red.jpg",
+        "relativePath": "15-coffee-red.jpg",
+        "bytes": 622883,
+        "width": 5422,
+        "height": 3050,
+        "mime": "image/jpeg",
+        "sha256": "0af4bfd54dc6d7c1bfab71591a0162db0a53ea89c37d4e70baaf372c6dcfb1e1"
+      },
+      "output": {
+        "path": "images/15-coffee-red-leafbyte.webp",
+        "bytes": 4756,
+        "width": 800,
+        "height": 450,
+        "mime": "image/webp",
+        "sha256": "2b0a935914f2c6dd6f1163af9e6f6b785a92868ae72d5ae0a01cce8cbdcd9375"
+      },
+      "variants": [
+        {
+          "path": "images/15-coffee-red-leafbyte-480w.webp",
+          "bytes": 2722,
+          "width": 480,
+          "height": 270,
+          "mime": "image/webp",
+          "sha256": "9291e0e4beb8414d42e711a66cb5fb65e5bd17b7a31619c892e4343c38e7f2a0",
+          "encoderQuality": 0.52,
+          "sampledSimilarity": 0.9888796286000817
+        }
+      ],
+      "selectedCandidate": 6,
+      "encoderQuality": 0.52,
+      "sampledSimilarity": 0.9914228489113115,
+      "keptOriginal": false,
+      "savedBytes": 618127,
+      "savedPercent": 99.23645371602693,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 312.30000001192093
+    },
+    {
+      "input": {
+        "name": "16-railway-tracks.jpg",
+        "relativePath": "16-railway-tracks.jpg",
+        "bytes": 441346,
+        "width": 2000,
+        "height": 1329,
+        "mime": "image/jpeg",
+        "sha256": "56ac8a22d7274ad8680970f2d948b3fdb857de1eb13015cf5f69edb92c86bdff"
+      },
+      "output": {
+        "path": "images/16-railway-tracks-leafbyte.webp",
+        "bytes": 25804,
+        "width": 800,
+        "height": 532,
+        "mime": "image/webp",
+        "sha256": "8903b1d89e9902ebdcc4a2b47c24d95bc190b614bd375d3c00a53b09dcedbda9"
+      },
+      "variants": [
+        {
+          "path": "images/16-railway-tracks-leafbyte-480w.webp",
+          "bytes": 15682,
+          "width": 480,
+          "height": 319,
+          "mime": "image/webp",
+          "sha256": "bf8fd0e0f4e819553626ebbda2d6138e2b7cf5baab1763f28ecba52dd8c988c7",
+          "encoderQuality": 0.68,
+          "sampledSimilarity": 0.9741664129823171
+        }
+      ],
+      "selectedCandidate": 6,
+      "encoderQuality": 0.52,
+      "sampledSimilarity": 0.9726096996315926,
+      "keptOriginal": false,
+      "savedBytes": 415542,
+      "savedPercent": 94.15334000987887,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 293.10000002384186
+    },
+    {
+      "input": {
+        "name": "17-foggy-road.jpg",
+        "relativePath": "17-foggy-road.jpg",
+        "bytes": 1545585,
+        "width": 3011,
+        "height": 2000,
+        "mime": "image/jpeg",
+        "sha256": "8eb8638b1e9b6e84116b4a16472a7a97b7ac19d853df3ec6310395f135b75d15"
+      },
+      "output": {
+        "path": "images/17-foggy-road-leafbyte.webp",
+        "bytes": 73324,
+        "width": 800,
+        "height": 531,
+        "mime": "image/webp",
+        "sha256": "80adb15b1cedcaa566154a9e005bd59af61f4a2ee1f65d8bf75d5d260488b89d"
+      },
+      "variants": [
+        {
+          "path": "images/17-foggy-road-leafbyte-480w.webp",
+          "bytes": 28032,
+          "width": 480,
+          "height": 319,
+          "mime": "image/webp",
+          "sha256": "13d167cbf8807cea511aebbe449bf12a4e2b88718e3b6d842dfabf5d6667029f",
+          "encoderQuality": 0.84,
+          "sampledSimilarity": 0.9783760996413233
+        }
+      ],
+      "selectedCandidate": 2,
+      "encoderQuality": 0.84,
+      "sampledSimilarity": 0.9727355638263872,
+      "keptOriginal": false,
+      "savedBytes": 1472261,
+      "savedPercent": 95.25590633967073,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 414.90000000596046
+    },
+    {
+      "input": {
+        "name": "18-lakeside-swing.jpg",
+        "relativePath": "18-lakeside-swing.jpg",
+        "bytes": 1189628,
+        "width": 2000,
+        "height": 1333,
+        "mime": "image/jpeg",
+        "sha256": "f11b80407b622b2ad6056638b534551c81abf756ccbeda503c10240e43928eb5"
+      },
+      "output": {
+        "path": "images/18-lakeside-swing-leafbyte.webp",
+        "bytes": 84290,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "e4dc10291907f1418694560c123bd2e4344dc446499f420230befc7044c552f8"
+      },
+      "variants": [
+        {
+          "path": "images/18-lakeside-swing-leafbyte-480w.webp",
+          "bytes": 30504,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "2f0b8a04438771f3a6752de96ad9052f38b48f78cee779864c508fa93512da18",
+          "encoderQuality": 0.76,
+          "sampledSimilarity": 0.9723607641870513
+        }
+      ],
+      "selectedCandidate": 3,
+      "encoderQuality": 0.76,
+      "sampledSimilarity": 0.9704014545940723,
+      "keptOriginal": false,
+      "savedBytes": 1105338,
+      "savedPercent": 92.91459178835737,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 393.7000000178814
+    },
+    {
+      "input": {
+        "name": "19-baseball-glove.jpg",
+        "relativePath": "19-baseball-glove.jpg",
+        "bytes": 460499,
+        "width": 2000,
+        "height": 1333,
+        "mime": "image/jpeg",
+        "sha256": "164c1d120b1aecac842e0f2fc82aefa94cc71690a7a6c646c2906a2796792332"
+      },
+      "output": {
+        "path": "images/19-baseball-glove-leafbyte.webp",
+        "bytes": 46256,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "1e182a5f25bfee3c5f79308f16d7aff35ad8e9f40598f6f5fae7361f1e8ded94"
+      },
+      "variants": [
+        {
+          "path": "images/19-baseball-glove-leafbyte-480w.webp",
+          "bytes": 7892,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "38f38087e3b4c0022bd55c0e746673dd00ecb248b3ff497e3f4c2a3401a7a7cb",
+          "encoderQuality": 0.76,
+          "sampledSimilarity": 0.9710195590155997
+        }
+      ],
+      "selectedCandidate": 1,
+      "encoderQuality": 0.92,
+      "sampledSimilarity": 0.9782361760739445,
+      "keptOriginal": false,
+      "savedBytes": 414243,
+      "savedPercent": 89.95524420248469,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 265.7000000178814
+    },
+    {
+      "input": {
+        "name": "20-sea-pier.jpg",
+        "relativePath": "20-sea-pier.jpg",
+        "bytes": 573883,
+        "width": 1631,
+        "height": 1102,
+        "mime": "image/jpeg",
+        "sha256": "4c5d4452dbfc16067ef225327fa69d2be3d346c6b09d728b07558b229ba6320f"
+      },
+      "output": {
+        "path": "images/20-sea-pier-leafbyte.webp",
+        "bytes": 133932,
+        "width": 800,
+        "height": 541,
+        "mime": "image/webp",
+        "sha256": "4254dd16068895e3a326c6520ea027f3ccbd7c97aef6995a8cb4263f0b016c30"
+      },
+      "variants": [
+        {
+          "path": "images/20-sea-pier-leafbyte-480w.webp",
+          "bytes": 40874,
+          "width": 480,
+          "height": 324,
+          "mime": "image/webp",
+          "sha256": "31a895237d5e554b720503fa8522de9213983a86b4deabe2f546c7a5262952cb",
+          "encoderQuality": 0.92,
+          "sampledSimilarity": 0.981558096159698
+        }
+      ],
+      "selectedCandidate": 1,
+      "encoderQuality": 0.92,
+      "sampledSimilarity": 0.9812094756931631,
+      "keptOriginal": false,
+      "savedBytes": 439951,
+      "savedPercent": 76.66214193485432,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 340.40000000596046
+    },
+    {
+      "input": {
+        "name": "21-forest-dusk.jpg",
+        "relativePath": "21-forest-dusk.jpg",
+        "bytes": 657047,
+        "width": 2560,
+        "height": 1920,
+        "mime": "image/jpeg",
+        "sha256": "e3da184cded464ff050bd2ca76e21ebb593f8cc395081d4591da7de164bebd7c"
+      },
+      "output": {
+        "path": "images/21-forest-dusk-leafbyte.webp",
+        "bytes": 94028,
+        "width": 800,
+        "height": 600,
+        "mime": "image/webp",
+        "sha256": "2874db2a1a3a5d44bb96eef6172affe9a3a927ebfbde0a0aec401f0bfd99d6d7"
+      },
+      "variants": [
+        {
+          "path": "images/21-forest-dusk-leafbyte-480w.webp",
+          "bytes": 36446,
+          "width": 480,
+          "height": 360,
+          "mime": "image/webp",
+          "sha256": "e9c35c7080e1e270d66bee0c56d91151a6bcfc31129b1ce81514280bb9378b70",
+          "encoderQuality": 0.92,
+          "sampledSimilarity": 0.98024468682933
+        }
+      ],
+      "selectedCandidate": 1,
+      "encoderQuality": 0.92,
+      "sampledSimilarity": 0.9807478016593087,
+      "keptOriginal": false,
+      "savedBytes": 563019,
+      "savedPercent": 85.68930380931653,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 353.7999999821186
+    },
+    {
+      "input": {
+        "name": "22-bridge-night.jpg",
+        "relativePath": "22-bridge-night.jpg",
+        "bytes": 149344,
+        "width": 1280,
+        "height": 848,
+        "mime": "image/jpeg",
+        "sha256": "3d7cf48a4b9e276d6c354d6ab19a51c71db8f1852240030063eb71987560c001"
+      },
+      "output": {
+        "path": "images/22-bridge-night-leafbyte.webp",
+        "bytes": 20778,
+        "width": 800,
+        "height": 530,
+        "mime": "image/webp",
+        "sha256": "f3a376b247f9316784478d40e7cb39e80fddaa144c9c7799f8e26e740612aa7c"
+      },
+      "variants": [
+        {
+          "path": "images/22-bridge-night-leafbyte-480w.webp",
+          "bytes": 8714,
+          "width": 480,
+          "height": 318,
+          "mime": "image/webp",
+          "sha256": "ee2207d2f17836369f2ff9e7c0399dc07b377fad3f0a10c882d1489e6306e0d0",
+          "encoderQuality": 0.68,
+          "sampledSimilarity": 0.9700976525990159
+        }
+      ],
+      "selectedCandidate": 3,
+      "encoderQuality": 0.76,
+      "sampledSimilarity": 0.9704330744560651,
+      "keptOriginal": false,
+      "savedBytes": 128566,
+      "savedPercent": 86.08715448896508,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 249.7000000178814
+    },
+    {
+      "input": {
+        "name": "23-city-traffic.jpg",
+        "relativePath": "23-city-traffic.jpg",
+        "bytes": 452355,
+        "width": 1280,
+        "height": 1707,
+        "mime": "image/jpeg",
+        "sha256": "556255118141be717e8679703b28ccdc282189265d57e50658e474698a83f9fa"
+      },
+      "output": {
+        "path": "images/23-city-traffic-leafbyte.webp",
+        "bytes": 180812,
+        "width": 800,
+        "height": 1067,
+        "mime": "image/webp",
+        "sha256": "f41116a6089f6f4ac2bf3345bb14e961b9e354308d971656309b0dfea5225737"
+      },
+      "variants": [
+        {
+          "path": "images/23-city-traffic-leafbyte-480w.webp",
+          "bytes": 44790,
+          "width": 480,
+          "height": 640,
+          "mime": "image/webp",
+          "sha256": "0f28f02a4df81b3102d43dcde73494b52f120878c660a61cb9d10bc0bac8d0c1",
+          "encoderQuality": 0.84,
+          "sampledSimilarity": 0.974494021602476
+        }
+      ],
+      "selectedCandidate": 1,
+      "encoderQuality": 0.92,
+      "sampledSimilarity": 0.9822390793758178,
+      "keptOriginal": false,
+      "savedBytes": 271543,
+      "savedPercent": 60.028738490787106,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 571.4000000059605
+    },
+    {
+      "input": {
+        "name": "24-grass-backlight.jpg",
+        "relativePath": "24-grass-backlight.jpg",
+        "bytes": 417545,
+        "width": 2000,
+        "height": 1125,
+        "mime": "image/jpeg",
+        "sha256": "faa17a86e7f85a1ec550a61ba0c0882108752902212290f9568999c25afbff3c"
+      },
+      "output": {
+        "path": "images/24-grass-backlight-leafbyte.webp",
+        "bytes": 23060,
+        "width": 800,
+        "height": 450,
+        "mime": "image/webp",
+        "sha256": "81893341450bf292b07f4b97204f71875340bc18d378ed22db70eefdf9e16787"
+      },
+      "variants": [
+        {
+          "path": "images/24-grass-backlight-leafbyte-480w.webp",
+          "bytes": 12348,
+          "width": 480,
+          "height": 270,
+          "mime": "image/webp",
+          "sha256": "d4e90856014f7b3a0d6ee632b0388434954e9c643cadeb48fdbf7ebbeca7fcde",
+          "encoderQuality": 0.68,
+          "sampledSimilarity": 0.9727116830924601
+        }
+      ],
+      "selectedCandidate": 4,
+      "encoderQuality": 0.68,
+      "sampledSimilarity": 0.9707629532182196,
+      "keptOriginal": false,
+      "savedBytes": 394485,
+      "savedPercent": 94.47724197391898,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 256.5
+    },
+    {
+      "input": {
+        "name": "25-barley-wheat.jpg",
+        "relativePath": "25-barley-wheat.jpg",
+        "bytes": 663443,
+        "width": 3264,
+        "height": 2176,
+        "mime": "image/jpeg",
+        "sha256": "e095ec6165dda9eb48e07c976f404d13c7fd90a9d3fb01fbfea92340776fbf32"
+      },
+      "output": {
+        "path": "images/25-barley-wheat-leafbyte.webp",
+        "bytes": 14916,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "a87c5b1ffa8b68942c3b3e523219b0d5d5cfda036425d065e5c7f175c2af46c0"
+      },
+      "variants": [
+        {
+          "path": "images/25-barley-wheat-leafbyte-480w.webp",
+          "bytes": 12254,
+          "width": 480,
+          "height": 320,
+          "mime": "image/webp",
+          "sha256": "9e6160cadfbe20f8f45cf0d31cc30c2f9b2e23a356c23d3f321ca76c0b787eab",
+          "encoderQuality": 0.84,
+          "sampledSimilarity": 0.9776604744149606
+        }
+      ],
+      "selectedCandidate": 4,
+      "encoderQuality": 0.68,
+      "sampledSimilarity": 0.970112306916832,
+      "keptOriginal": false,
+      "savedBytes": 648527,
+      "savedPercent": 97.75172848307993,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 318.80000001192093
+    },
+    {
+      "input": {
+        "name": "26-wooden-wagon.jpg",
+        "relativePath": "26-wooden-wagon.jpg",
+        "bytes": 417761,
+        "width": 2000,
+        "height": 1329,
+        "mime": "image/jpeg",
+        "sha256": "6c2f0da3e3de337041f7120869dff66de7bb8bba1cd15f88417a2b0a08c21292"
+      },
+      "output": {
+        "path": "images/26-wooden-wagon-leafbyte.webp",
+        "bytes": 35190,
+        "width": 800,
+        "height": 532,
+        "mime": "image/webp",
+        "sha256": "9efa02dafb011a6ac5620dd93c1069436d84cf16c092b45e997ce0dc7bf1f00e"
+      },
+      "variants": [
+        {
+          "path": "images/26-wooden-wagon-leafbyte-480w.webp",
+          "bytes": 17094,
+          "width": 480,
+          "height": 319,
+          "mime": "image/webp",
+          "sha256": "10b4629c0471f467967c95cb9bc2aa26a649358d21e56cfae3f4357d2445d4f0",
+          "encoderQuality": 0.76,
+          "sampledSimilarity": 0.9710356193349438
+        }
+      ],
+      "selectedCandidate": 3,
+      "encoderQuality": 0.76,
+      "sampledSimilarity": 0.972041395446148,
+      "keptOriginal": false,
+      "savedBytes": 382571,
+      "savedPercent": 91.57652341889262,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap.",
+        "Responsive variants add storage to the export. A browser normally chooses one srcset candidate per image request; the primary-file byte budget excludes these additional files."
+      ],
+      "processingDurationMs": 298.60000002384186
+    }
+  ],
+  "sources": [
+    "https://www.w3.org/TR/web-sustainability-guidelines/",
+    "https://web.dev/learn/performance/image-performance"
+  ]
+}

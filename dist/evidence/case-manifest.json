@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "objects",
+    "title": "Everyday objects",
+    "images": [
+      "01-laptop-desk.jpg",
+      "02-creative-workspace.jpg",
+      "03-everyday-accessories.jpg",
+      "04-printed-mug.jpg",
+      "05-camera-components.jpg",
+      "15-coffee-red.jpg"
+    ],
+    "beforeImageBytes": 7086897,
+    "primaryAfterBytes": 204236,
+    "smallestVariantBytes": 82490,
+    "primaryReductionPercent": 97.11811812701666
+  },
+  {
+    "slug": "field-notes",
+    "title": "Field notes",
+    "images": [
+      "13-mountain-clouds.jpg",
+      "17-foggy-road.jpg",
+      "18-lakeside-swing.jpg",
+      "20-sea-pier.jpg",
+      "21-forest-dusk.jpg",
+      "12-ocean-monochrome.jpg"
+    ],
+    "beforeImageBytes": 5826088,
+    "primaryAfterBytes": 483238,
+    "smallestVariantBytes": 172920,
+    "primaryReductionPercent": 91.70561790347142
+  }
+]

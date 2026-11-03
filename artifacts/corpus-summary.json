@@ -1,0 +1,11 @@
+{
+  "images": 26,
+  "inputBytes": 21923446,
+  "outputBytes": 1459700,
+  "aggregateReductionPercent": 93.34183138909823,
+  "medianReductionPercent": 92.43363082731884,
+  "minReductionPercent": 60.028738490787106,
+  "maxReductionPercent": 99.23645371602693,
+  "additionalVariantBytes": 514900,
+  "allImageBytes": 1974600
+}

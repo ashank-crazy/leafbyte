@@ -63,7 +63,7 @@ hypotheticalBytesAvoided = bundleSavedBytes * assumedFullBundleLoads
 
 This assumes each load requests every selected image and would otherwise request every original. Real caching, responsive variants, lazy loading, partial visits, delivery compression and repeat visits can change the result. The app does not measure those behaviors. Scenario totals are not actual traffic or observed transfers.
 
-Fewer file bytes do not imply a known linear reduction in electricity or emissions. Infrastructure, devices, network technology, caching and energy sources matter. Encoding and running the optimizer also consume resources. LeafByte therefore makes no claim of measured electricity savings, avoided CO2, water savings or net environmental impact.
+Fewer file bytes do not imply a known linear reduction in electricity or emissions. Infrastructure, devices, network technology, caching and energy sources matter. Encoding and running the optimizer also consume resources. The updated app applies the pinned CO2.js / SWD v4 model to explicit traffic, cache and hosting scenarios; see [the model specification](CO2-MODEL.md). Modelled differences are kept separate from measured file and page-request bytes.
 
 ## Data and privacy
 
@@ -77,11 +77,11 @@ The output sizes are actual encoding results; they do not establish real-world a
 
 ## Recorded benchmark and implemented replacement
 
-On 3 November 2026, a Chrome 156 browser run with a 1920 px maximum width, WebP and a 0.970 sampled similarity floor produced **1,906,332 output bytes from 3,633,061 input bytes**, reducing the selected image files by **1,726,729 bytes (47.528213811989396%)**. One image, the glacier input, was resized from 2286 × 1524 to 1920 × 1280. The other three retained source dimensions. This combines format/quality changes with one resolution change; it is not a lossless or all-same-resolution result.
+On 3 November 2026, a Chrome 156 browser run with a 1920 px maximum width, WebP and a 0.970 sampled similarity floor produced **1,906,332 output bytes from 3,633,061 input bytes**, reducing the selected image files by **1,726,729 bytes (47.5%)**. One image, the glacier input, was resized from 2286 × 1524 to 1920 × 1280. The other three retained source dimensions. This combines format/quality changes with one resolution change; it is not a lossless or all-same-resolution result.
 
-A second run using a 480 px maximum width produced **170,226 output bytes**, a **3,462,835-byte reduction (95.3145295385902%)**. Every image was downscaled. Its score compares each encoded thumbnail to a reference already resized to that thumbnail's dimensions; it does not establish that source-resolution information was retained.
+A second run using a 480 px maximum width produced **170,226 output bytes**, a **3,462,835-byte reduction (95.3%)**. Every image was downscaled. Its score compares each encoded thumbnail to a reference already resized to that thumbnail's dimensions; it does not establish that source-resolution information was retained.
 
-The application now uses the second run's **83,618-byte Amazon WebP at 480 × 617** as `dist/assets/hero.webp`, replacing the earlier hero reference to the **1,921,833-byte** Amazon JPEG. That reference now identifies an image with **1,838,215 fewer bytes (95.64904963126348%)**. The source image remains available for the opt-in sample benchmark, so retaining both files increases stored project assets. This implementation change is not a measured count of visitor transfers, electricity or emissions.
+The application now uses the second run's **83,618-byte Amazon WebP at 480 × 617** as `dist/assets/hero.webp`, replacing the earlier hero reference to the **1,921,833-byte** Amazon JPEG. That reference now identifies an image with **1,838,215 fewer bytes (95.6%)**. The source image remains available for the opt-in sample benchmark, so retaining both files increases stored project assets. This implementation change is not a measured count of visitor transfers, electricity or emissions.
 
 Raw exported manifests, per-image values, browser identification and steps are in [the benchmark report](BENCHMARK.md). Exported ZIP CRC integrity and SHA-256 matches for the actual output images were independently checked. Browser-native codecs can produce different outputs in other environments.
 
@@ -96,3 +96,8 @@ Automated checks cover the calculations and packaging that can be checked determ
 - [web.dev: Choose the right image format](https://web.dev/articles/choose-the-right-image-format).
 
 Original application work was assisted by OpenAI Codex. The project makes no claim that AI assistance, submission eligibility or project quality has been approved by the hackathon organizer.
+
+
+## Broader corpus and page deployments
+
+The expanded 26-photo benchmark at an 800 px maximum width produced 1,459,700 primary output bytes from 21,923,446 input bytes: 93.3% aggregate reduction and 92.4% median per-image reduction (range 60.0–99.2%). It also created 514,900 bytes of responsive variants, separately accounted for. [Corpus sources](CORPUS.md) document preparation and licenses. [Matched browser page measurements](PAGE-MEASUREMENTS.md) record actual requests for two controlled before/after layouts.

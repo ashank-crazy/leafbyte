@@ -1,0 +1,97 @@
+{
+  "url": "http://127.0.0.1:4328/dist/evidence/objects/before/?audit=1",
+  "timestamp": "2026-11-03T07:12:22.523Z",
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "devicePixelRatio": 2
+  },
+  "imageEncodedBodyBytes": 7086897,
+  "imageTransferBytes": 7088697,
+  "resourceTransferBytes": 7091929,
+  "pageTransferBytes": 7095054,
+  "documentTransferBytes": 3125,
+  "allImagesComplete": true,
+  "images": [
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/01-laptop-desk.jpg",
+      "naturalWidth": 5616,
+      "naturalHeight": 3744
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/02-creative-workspace.jpg",
+      "naturalWidth": 3670,
+      "naturalHeight": 2462
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/03-everyday-accessories.jpg",
+      "naturalWidth": 2000,
+      "naturalHeight": 1316
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/04-printed-mug.jpg",
+      "naturalWidth": 1280,
+      "naturalHeight": 901
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/05-camera-components.jpg",
+      "naturalWidth": 4179,
+      "naturalHeight": 2790
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/15-coffee-red.jpg",
+      "naturalWidth": 5422,
+      "naturalHeight": 3050
+    }
+  ],
+  "resources": [
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/case.css",
+      "type": "link",
+      "transferSize": 1479,
+      "encodedBodySize": 1179
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/01-laptop-desk.jpg",
+      "type": "img",
+      "transferSize": 1989673,
+      "encodedBodySize": 1989373
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/02-creative-workspace.jpg",
+      "type": "img",
+      "transferSize": 1648299,
+      "encodedBodySize": 1647999
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/03-everyday-accessories.jpg",
+      "type": "img",
+      "transferSize": 603880,
+      "encodedBodySize": 603580
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/04-printed-mug.jpg",
+      "type": "img",
+      "transferSize": 182897,
+      "encodedBodySize": 182597
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/05-camera-components.jpg",
+      "type": "img",
+      "transferSize": 2040765,
+      "encodedBodySize": 2040465
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/15-coffee-red.jpg",
+      "type": "img",
+      "transferSize": 623183,
+      "encodedBodySize": 622883
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/measure.js",
+      "type": "script",
+      "transferSize": 1753,
+      "encodedBodySize": 1453
+    }
+  ]
+}

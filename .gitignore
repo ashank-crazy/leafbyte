@@ -10,3 +10,8 @@ artifacts/*.jpg
 artifacts/qa/
 artifacts/*.webm
 artifacts/*.mp4
+
+artifacts/demo-frames/
+artifacts/bench-output/
+
+!dist/evidence/demo.mp4

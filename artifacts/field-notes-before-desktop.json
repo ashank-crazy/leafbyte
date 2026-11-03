@@ -1,0 +1,97 @@
+{
+  "url": "http://127.0.0.1:4328/dist/evidence/field-notes/before/?audit=1",
+  "timestamp": "2026-11-03T07:13:28.495Z",
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "devicePixelRatio": 2
+  },
+  "imageEncodedBodyBytes": 5826088,
+  "imageTransferBytes": 5827888,
+  "resourceTransferBytes": 5831120,
+  "pageTransferBytes": 5834171,
+  "documentTransferBytes": 3051,
+  "allImagesComplete": true,
+  "images": [
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/13-mountain-clouds.jpg",
+      "naturalWidth": 3264,
+      "naturalHeight": 2176
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/17-foggy-road.jpg",
+      "naturalWidth": 3011,
+      "naturalHeight": 2000
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/18-lakeside-swing.jpg",
+      "naturalWidth": 2000,
+      "naturalHeight": 1333
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/20-sea-pier.jpg",
+      "naturalWidth": 1631,
+      "naturalHeight": 1102
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/21-forest-dusk.jpg",
+      "naturalWidth": 2560,
+      "naturalHeight": 1920
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/12-ocean-monochrome.jpg",
+      "naturalWidth": 2000,
+      "naturalHeight": 1333
+    }
+  ],
+  "resources": [
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/case.css",
+      "type": "link",
+      "transferSize": 1479,
+      "encodedBodySize": 1179
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/13-mountain-clouds.jpg",
+      "type": "img",
+      "transferSize": 1263923,
+      "encodedBodySize": 1263623
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/17-foggy-road.jpg",
+      "type": "img",
+      "transferSize": 1545885,
+      "encodedBodySize": 1545585
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/18-lakeside-swing.jpg",
+      "type": "img",
+      "transferSize": 1189928,
+      "encodedBodySize": 1189628
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/20-sea-pier.jpg",
+      "type": "img",
+      "transferSize": 574183,
+      "encodedBodySize": 573883
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/21-forest-dusk.jpg",
+      "type": "img",
+      "transferSize": 657347,
+      "encodedBodySize": 657047
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/measure.js",
+      "type": "script",
+      "transferSize": 1753,
+      "encodedBodySize": 1453
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/12-ocean-monochrome.jpg",
+      "type": "img",
+      "transferSize": 596622,
+      "encodedBodySize": 596322
+    }
+  ]
+}

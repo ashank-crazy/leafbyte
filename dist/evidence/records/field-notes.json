@@ -1,0 +1,338 @@
+{
+  "slug": "field-notes",
+  "title": "Field notes",
+  "images": [
+    "13-mountain-clouds.jpg",
+    "17-foggy-road.jpg",
+    "18-lakeside-swing.jpg",
+    "20-sea-pier.jpg",
+    "21-forest-dusk.jpg",
+    "12-ocean-monochrome.jpg"
+  ],
+  "beforeImageBytes": 5826088,
+  "primaryAfterBytes": 483238,
+  "smallestVariantBytes": 172920,
+  "primaryReductionPercent": 91.70561790347142,
+  "before": {
+    "url": "http://127.0.0.1:4328/dist/evidence/field-notes/before/?audit=1",
+    "timestamp": "2026-11-03T07:13:28.495Z",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "devicePixelRatio": 2
+    },
+    "imageEncodedBodyBytes": 5826088,
+    "imageTransferBytes": 5827888,
+    "resourceTransferBytes": 5831120,
+    "pageTransferBytes": 5834171,
+    "documentTransferBytes": 3051,
+    "allImagesComplete": true,
+    "images": [
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/13-mountain-clouds.jpg",
+        "naturalWidth": 3264,
+        "naturalHeight": 2176
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/17-foggy-road.jpg",
+        "naturalWidth": 3011,
+        "naturalHeight": 2000
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/18-lakeside-swing.jpg",
+        "naturalWidth": 2000,
+        "naturalHeight": 1333
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/20-sea-pier.jpg",
+        "naturalWidth": 1631,
+        "naturalHeight": 1102
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/21-forest-dusk.jpg",
+        "naturalWidth": 2560,
+        "naturalHeight": 1920
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/12-ocean-monochrome.jpg",
+        "naturalWidth": 2000,
+        "naturalHeight": 1333
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/case.css",
+        "type": "link",
+        "transferSize": 1479,
+        "encodedBodySize": 1179
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/13-mountain-clouds.jpg",
+        "type": "img",
+        "transferSize": 1263923,
+        "encodedBodySize": 1263623
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/17-foggy-road.jpg",
+        "type": "img",
+        "transferSize": 1545885,
+        "encodedBodySize": 1545585
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/18-lakeside-swing.jpg",
+        "type": "img",
+        "transferSize": 1189928,
+        "encodedBodySize": 1189628
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/20-sea-pier.jpg",
+        "type": "img",
+        "transferSize": 574183,
+        "encodedBodySize": 573883
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/21-forest-dusk.jpg",
+        "type": "img",
+        "transferSize": 657347,
+        "encodedBodySize": 657047
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/measure.js",
+        "type": "script",
+        "transferSize": 1753,
+        "encodedBodySize": 1453
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/12-ocean-monochrome.jpg",
+        "type": "img",
+        "transferSize": 596622,
+        "encodedBodySize": 596322
+      }
+    ]
+  },
+  "after": {
+    "url": "http://127.0.0.1:4328/dist/evidence/field-notes/after/?audit=1",
+    "timestamp": "2026-11-03T07:13:29.112Z",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "devicePixelRatio": 2
+    },
+    "imageEncodedBodyBytes": 483238,
+    "imageTransferBytes": 485038,
+    "resourceTransferBytes": 488270,
+    "pageTransferBytes": 492443,
+    "documentTransferBytes": 4173,
+    "allImagesComplete": true,
+    "images": [
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/13-mountain-clouds-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 333
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/17-foggy-road-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 331
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/18-lakeside-swing-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 333
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/20-sea-pier-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 338
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/21-forest-dusk-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 375
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/12-ocean-monochrome-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 333
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/case.css",
+        "type": "link",
+        "transferSize": 1479,
+        "encodedBodySize": 1179
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/13-mountain-clouds-leafbyte.webp",
+        "type": "img",
+        "transferSize": 49976,
+        "encodedBodySize": 49676
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/17-foggy-road-leafbyte.webp",
+        "type": "img",
+        "transferSize": 73624,
+        "encodedBodySize": 73324
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/18-lakeside-swing-leafbyte.webp",
+        "type": "img",
+        "transferSize": 84590,
+        "encodedBodySize": 84290
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/20-sea-pier-leafbyte.webp",
+        "type": "img",
+        "transferSize": 134232,
+        "encodedBodySize": 133932
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/21-forest-dusk-leafbyte.webp",
+        "type": "img",
+        "transferSize": 94328,
+        "encodedBodySize": 94028
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/measure.js",
+        "type": "script",
+        "transferSize": 1753,
+        "encodedBodySize": 1453
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/12-ocean-monochrome-leafbyte.webp",
+        "type": "img",
+        "transferSize": 48288,
+        "encodedBodySize": 47988
+      }
+    ]
+  },
+  "savedBytes": 5342850,
+  "modelled": {
+    "library": "@tgwf/co2",
+    "version": "0.19.0",
+    "model": "Sustainable Web Design Model v4",
+    "modelVersion": 4,
+    "gridIntensityGramsPerKwh": 494,
+    "gramsPerUncachedGigabyte": 148.2,
+    "unit": "gCO2e",
+    "lowGrams": 5978.1682935,
+    "highGrams": 7918.1037,
+    "scenarios": [
+      {
+        "id": "configured-visits",
+        "name": "Configured visitor, cache and hosting assumptions",
+        "grams": 5978.1682935,
+        "gramsPerAssumedVisit": 0.59781682935,
+        "visits": 10000,
+        "bytesSavedPerUncachedVisit": 5342850,
+        "assumedTransferredBytesAvoided": 40338517500,
+        "greenHosting": false,
+        "greenHostingFactor": 0,
+        "firstVisitPercentage": 0.75,
+        "returnVisitPercentage": 0.25,
+        "dataReloadRatio": 0.02,
+        "basis": "Illustrative user-editable scenario. Initial 75% new / 25% returning visits and 2% data reload reuse the documented legacy CO2.js preset; they are not SWD v4 defaults or measured audience behavior.",
+        "upstreamTrace": {
+          "co2": 0.59781682935,
+          "green": false,
+          "variables": {
+            "description": "Below are the variables used to calculate this CO2 estimate.",
+            "bytes": 5342850,
+            "gridIntensity": {
+              "description": "The grid intensity (grams per kilowatt-hour) used to calculate this CO2 estimate.",
+              "device": {
+                "value": 494
+              },
+              "dataCenter": {
+                "value": 494
+              },
+              "network": {
+                "value": 494
+              }
+            },
+            "greenHostingFactor": 0,
+            "dataReloadRatio": 0.02,
+            "firstVisitPercentage": 0.75,
+            "returnVisitPercentage": 0.25
+          }
+        }
+      },
+      {
+        "id": "uncached-reference",
+        "name": "All-new visits, no green hosting: SWD v4 reference",
+        "grams": 7918.1037,
+        "gramsPerAssumedVisit": 0.79181037,
+        "visits": 10000,
+        "bytesSavedPerUncachedVisit": 5342850,
+        "assumedTransferredBytesAvoided": 53428500000,
+        "greenHosting": false,
+        "greenHostingFactor": 0,
+        "firstVisitPercentage": 1,
+        "returnVisitPercentage": 0,
+        "dataReloadRatio": 0,
+        "basis": "Pinned SWD v4 default visit mix and green-hosting setting. Every assumed visit downloads the full bundle; no cache reduction is applied.",
+        "upstreamTrace": {
+          "co2": 0.79181037,
+          "green": false,
+          "variables": {
+            "description": "Below are the variables used to calculate this CO2 estimate.",
+            "bytes": 5342850,
+            "gridIntensity": {
+              "description": "The grid intensity (grams per kilowatt-hour) used to calculate this CO2 estimate.",
+              "device": {
+                "value": 494
+              },
+              "dataCenter": {
+                "value": 494
+              },
+              "network": {
+                "value": 494
+              }
+            },
+            "greenHostingFactor": 0,
+            "dataReloadRatio": 0,
+            "firstVisitPercentage": 1,
+            "returnVisitPercentage": 0
+          }
+        }
+      }
+    ],
+    "assumptions": {
+      "bytesSavedPerUncachedVisit": 5342850,
+      "hypotheticalVisits": 10000,
+      "configuredReturnVisitPercentage": 0.25,
+      "configuredDataReloadRatio": 0.02,
+      "configuredGreenHosting": false,
+      "gridIntensityGramsPerKwh": 494,
+      "gigabyteBytes": 1000000000,
+      "rangeMeaning": "The minimum and maximum of two explicitly named model configurations; not a confidence interval, scientific uncertainty range or guaranteed bounds on actual emissions.",
+      "hosting": "Green hosting is an assumption, not a lookup. In SWD v4 it removes the modeled data-center operational component; network, device and embodied components remain.",
+      "boundary": "Attributional model of data-center, network and end-user-device operational and embodied emissions, using bytes as a proxy.",
+      "interpretation": "A modeled difference under hypothetical visits, not measured electricity or verified avoided emissions. It is not a marginal energy or carbon-saving measurement.",
+      "exclusions": "Does not measure real traffic, caching, deployment, optimization overhead, the application payload, or the net life-cycle effect of image replacements."
+    },
+    "sources": [
+      {
+        "title": "Green Web Foundation: CO2.js models",
+        "url": "https://developers.thegreenwebfoundation.org/co2js/models/overview/"
+      },
+      {
+        "title": "Green Web Foundation: perVisitTrace options",
+        "url": "https://developers.thegreenwebfoundation.org/co2js/functions/pervisit-trace/"
+      },
+      {
+        "title": "Sustainable Web Design v4 methodology",
+        "url": "https://sustainablewebdesign.org/estimating-digital-emissions/"
+      },
+      {
+        "title": "Pinned CO2.js 0.19.0 constants and legacy cache preset",
+        "url": "https://github.com/thegreenwebfoundation/co2.js/blob/v0.19.0/src/constants/index.js"
+      },
+      {
+        "title": "Official npm package 0.19.0",
+        "url": "https://www.npmjs.com/package/@tgwf/co2/v/0.19.0"
+      }
+    ]
+  }
+}

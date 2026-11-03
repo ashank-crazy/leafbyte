@@ -1,0 +1,338 @@
+{
+  "slug": "objects",
+  "title": "Everyday objects",
+  "images": [
+    "01-laptop-desk.jpg",
+    "02-creative-workspace.jpg",
+    "03-everyday-accessories.jpg",
+    "04-printed-mug.jpg",
+    "05-camera-components.jpg",
+    "15-coffee-red.jpg"
+  ],
+  "beforeImageBytes": 7086897,
+  "primaryAfterBytes": 204236,
+  "smallestVariantBytes": 82490,
+  "primaryReductionPercent": 97.11811812701666,
+  "before": {
+    "url": "http://127.0.0.1:4328/dist/evidence/objects/before/?audit=1",
+    "timestamp": "2026-11-03T07:12:22.523Z",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "devicePixelRatio": 2
+    },
+    "imageEncodedBodyBytes": 7086897,
+    "imageTransferBytes": 7088697,
+    "resourceTransferBytes": 7091929,
+    "pageTransferBytes": 7095054,
+    "documentTransferBytes": 3125,
+    "allImagesComplete": true,
+    "images": [
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/01-laptop-desk.jpg",
+        "naturalWidth": 5616,
+        "naturalHeight": 3744
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/02-creative-workspace.jpg",
+        "naturalWidth": 3670,
+        "naturalHeight": 2462
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/03-everyday-accessories.jpg",
+        "naturalWidth": 2000,
+        "naturalHeight": 1316
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/04-printed-mug.jpg",
+        "naturalWidth": 1280,
+        "naturalHeight": 901
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/05-camera-components.jpg",
+        "naturalWidth": 4179,
+        "naturalHeight": 2790
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/15-coffee-red.jpg",
+        "naturalWidth": 5422,
+        "naturalHeight": 3050
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/case.css",
+        "type": "link",
+        "transferSize": 1479,
+        "encodedBodySize": 1179
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/01-laptop-desk.jpg",
+        "type": "img",
+        "transferSize": 1989673,
+        "encodedBodySize": 1989373
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/02-creative-workspace.jpg",
+        "type": "img",
+        "transferSize": 1648299,
+        "encodedBodySize": 1647999
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/03-everyday-accessories.jpg",
+        "type": "img",
+        "transferSize": 603880,
+        "encodedBodySize": 603580
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/04-printed-mug.jpg",
+        "type": "img",
+        "transferSize": 182897,
+        "encodedBodySize": 182597
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/05-camera-components.jpg",
+        "type": "img",
+        "transferSize": 2040765,
+        "encodedBodySize": 2040465
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/15-coffee-red.jpg",
+        "type": "img",
+        "transferSize": 623183,
+        "encodedBodySize": 622883
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/measure.js",
+        "type": "script",
+        "transferSize": 1753,
+        "encodedBodySize": 1453
+      }
+    ]
+  },
+  "after": {
+    "url": "http://127.0.0.1:4328/dist/evidence/objects/after/?audit=1",
+    "timestamp": "2026-11-03T07:12:53.230Z",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "devicePixelRatio": 2
+    },
+    "imageEncodedBodyBytes": 204236,
+    "imageTransferBytes": 206036,
+    "resourceTransferBytes": 209268,
+    "pageTransferBytes": 213542,
+    "documentTransferBytes": 4274,
+    "allImagesComplete": true,
+    "images": [
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/01-laptop-desk-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 333
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/02-creative-workspace-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 335
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/03-everyday-accessories-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 328
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/04-printed-mug-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 351
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/05-camera-components-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 333
+      },
+      {
+        "source": "http://127.0.0.1:4328/dist/evidence/assets/15-coffee-red-leafbyte.webp",
+        "naturalWidth": 500,
+        "naturalHeight": 281
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/case.css",
+        "type": "link",
+        "transferSize": 1479,
+        "encodedBodySize": 1179
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/02-creative-workspace-leafbyte.webp",
+        "type": "img",
+        "transferSize": 27452,
+        "encodedBodySize": 27152
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/01-laptop-desk-leafbyte.webp",
+        "type": "img",
+        "transferSize": 20304,
+        "encodedBodySize": 20004
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/03-everyday-accessories-leafbyte.webp",
+        "type": "img",
+        "transferSize": 82354,
+        "encodedBodySize": 82054
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/measure.js",
+        "type": "script",
+        "transferSize": 1753,
+        "encodedBodySize": 1453
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/15-coffee-red-leafbyte.webp",
+        "type": "img",
+        "transferSize": 5056,
+        "encodedBodySize": 4756
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/05-camera-components-leafbyte.webp",
+        "type": "img",
+        "transferSize": 30814,
+        "encodedBodySize": 30514
+      },
+      {
+        "name": "http://127.0.0.1:4328/dist/evidence/assets/04-printed-mug-leafbyte.webp",
+        "type": "img",
+        "transferSize": 40056,
+        "encodedBodySize": 39756
+      }
+    ]
+  },
+  "savedBytes": 6882661,
+  "modelled": {
+    "library": "@tgwf/co2",
+    "version": "0.19.0",
+    "model": "Sustainable Web Design Model v4",
+    "modelVersion": 4,
+    "gridIntensityGramsPerKwh": 494,
+    "gramsPerUncachedGigabyte": 148.2,
+    "unit": "gCO2e",
+    "lowGrams": 7701.078219510001,
+    "highGrams": 10200.103602000001,
+    "scenarios": [
+      {
+        "id": "configured-visits",
+        "name": "Configured visitor, cache and hosting assumptions",
+        "grams": 7701.078219510001,
+        "gramsPerAssumedVisit": 0.7701078219510001,
+        "visits": 10000,
+        "bytesSavedPerUncachedVisit": 6882661,
+        "assumedTransferredBytesAvoided": 51964090550,
+        "greenHosting": false,
+        "greenHostingFactor": 0,
+        "firstVisitPercentage": 0.75,
+        "returnVisitPercentage": 0.25,
+        "dataReloadRatio": 0.02,
+        "basis": "Illustrative user-editable scenario. Initial 75% new / 25% returning visits and 2% data reload reuse the documented legacy CO2.js preset; they are not SWD v4 defaults or measured audience behavior.",
+        "upstreamTrace": {
+          "co2": 0.7701078219510001,
+          "green": false,
+          "variables": {
+            "description": "Below are the variables used to calculate this CO2 estimate.",
+            "bytes": 6882661,
+            "gridIntensity": {
+              "description": "The grid intensity (grams per kilowatt-hour) used to calculate this CO2 estimate.",
+              "device": {
+                "value": 494
+              },
+              "dataCenter": {
+                "value": 494
+              },
+              "network": {
+                "value": 494
+              }
+            },
+            "greenHostingFactor": 0,
+            "dataReloadRatio": 0.02,
+            "firstVisitPercentage": 0.75,
+            "returnVisitPercentage": 0.25
+          }
+        }
+      },
+      {
+        "id": "uncached-reference",
+        "name": "All-new visits, no green hosting: SWD v4 reference",
+        "grams": 10200.103602000001,
+        "gramsPerAssumedVisit": 1.0200103602000001,
+        "visits": 10000,
+        "bytesSavedPerUncachedVisit": 6882661,
+        "assumedTransferredBytesAvoided": 68826610000,
+        "greenHosting": false,
+        "greenHostingFactor": 0,
+        "firstVisitPercentage": 1,
+        "returnVisitPercentage": 0,
+        "dataReloadRatio": 0,
+        "basis": "Pinned SWD v4 default visit mix and green-hosting setting. Every assumed visit downloads the full bundle; no cache reduction is applied.",
+        "upstreamTrace": {
+          "co2": 1.0200103602000001,
+          "green": false,
+          "variables": {
+            "description": "Below are the variables used to calculate this CO2 estimate.",
+            "bytes": 6882661,
+            "gridIntensity": {
+              "description": "The grid intensity (grams per kilowatt-hour) used to calculate this CO2 estimate.",
+              "device": {
+                "value": 494
+              },
+              "dataCenter": {
+                "value": 494
+              },
+              "network": {
+                "value": 494
+              }
+            },
+            "greenHostingFactor": 0,
+            "dataReloadRatio": 0,
+            "firstVisitPercentage": 1,
+            "returnVisitPercentage": 0
+          }
+        }
+      }
+    ],
+    "assumptions": {
+      "bytesSavedPerUncachedVisit": 6882661,
+      "hypotheticalVisits": 10000,
+      "configuredReturnVisitPercentage": 0.25,
+      "configuredDataReloadRatio": 0.02,
+      "configuredGreenHosting": false,
+      "gridIntensityGramsPerKwh": 494,
+      "gigabyteBytes": 1000000000,
+      "rangeMeaning": "The minimum and maximum of two explicitly named model configurations; not a confidence interval, scientific uncertainty range or guaranteed bounds on actual emissions.",
+      "hosting": "Green hosting is an assumption, not a lookup. In SWD v4 it removes the modeled data-center operational component; network, device and embodied components remain.",
+      "boundary": "Attributional model of data-center, network and end-user-device operational and embodied emissions, using bytes as a proxy.",
+      "interpretation": "A modeled difference under hypothetical visits, not measured electricity or verified avoided emissions. It is not a marginal energy or carbon-saving measurement.",
+      "exclusions": "Does not measure real traffic, caching, deployment, optimization overhead, the application payload, or the net life-cycle effect of image replacements."
+    },
+    "sources": [
+      {
+        "title": "Green Web Foundation: CO2.js models",
+        "url": "https://developers.thegreenwebfoundation.org/co2js/models/overview/"
+      },
+      {
+        "title": "Green Web Foundation: perVisitTrace options",
+        "url": "https://developers.thegreenwebfoundation.org/co2js/functions/pervisit-trace/"
+      },
+      {
+        "title": "Sustainable Web Design v4 methodology",
+        "url": "https://sustainablewebdesign.org/estimating-digital-emissions/"
+      },
+      {
+        "title": "Pinned CO2.js 0.19.0 constants and legacy cache preset",
+        "url": "https://github.com/thegreenwebfoundation/co2.js/blob/v0.19.0/src/constants/index.js"
+      },
+      {
+        "title": "Official npm package 0.19.0",
+        "url": "https://www.npmjs.com/package/@tgwf/co2/v/0.19.0"
+      }
+    ]
+  }
+}

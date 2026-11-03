@@ -1,0 +1,97 @@
+{
+  "url": "http://127.0.0.1:4328/dist/evidence/field-notes/after/?audit=1",
+  "timestamp": "2026-11-03T07:13:29.112Z",
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "devicePixelRatio": 2
+  },
+  "imageEncodedBodyBytes": 483238,
+  "imageTransferBytes": 485038,
+  "resourceTransferBytes": 488270,
+  "pageTransferBytes": 492443,
+  "documentTransferBytes": 4173,
+  "allImagesComplete": true,
+  "images": [
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/13-mountain-clouds-leafbyte.webp",
+      "naturalWidth": 500,
+      "naturalHeight": 333
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/17-foggy-road-leafbyte.webp",
+      "naturalWidth": 500,
+      "naturalHeight": 331
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/18-lakeside-swing-leafbyte.webp",
+      "naturalWidth": 500,
+      "naturalHeight": 333
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/20-sea-pier-leafbyte.webp",
+      "naturalWidth": 500,
+      "naturalHeight": 338
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/21-forest-dusk-leafbyte.webp",
+      "naturalWidth": 500,
+      "naturalHeight": 375
+    },
+    {
+      "source": "http://127.0.0.1:4328/dist/evidence/assets/12-ocean-monochrome-leafbyte.webp",
+      "naturalWidth": 500,
+      "naturalHeight": 333
+    }
+  ],
+  "resources": [
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/case.css",
+      "type": "link",
+      "transferSize": 1479,
+      "encodedBodySize": 1179
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/13-mountain-clouds-leafbyte.webp",
+      "type": "img",
+      "transferSize": 49976,
+      "encodedBodySize": 49676
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/17-foggy-road-leafbyte.webp",
+      "type": "img",
+      "transferSize": 73624,
+      "encodedBodySize": 73324
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/18-lakeside-swing-leafbyte.webp",
+      "type": "img",
+      "transferSize": 84590,
+      "encodedBodySize": 84290
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/20-sea-pier-leafbyte.webp",
+      "type": "img",
+      "transferSize": 134232,
+      "encodedBodySize": 133932
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/21-forest-dusk-leafbyte.webp",
+      "type": "img",
+      "transferSize": 94328,
+      "encodedBodySize": 94028
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/measure.js",
+      "type": "script",
+      "transferSize": 1753,
+      "encodedBodySize": 1453
+    },
+    {
+      "name": "http://127.0.0.1:4328/dist/evidence/assets/12-ocean-monochrome-leafbyte.webp",
+      "type": "img",
+      "transferSize": 48288,
+      "encodedBodySize": 47988
+    }
+  ]
+}
