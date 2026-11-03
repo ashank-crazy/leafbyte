@@ -20,3 +20,8 @@ The sample benchmark records one browser's output; native encoders can differ el
 - A real whole-folder import accepted all 26 licensed corpus images. The app encoded them, created 26 responsive variants and exported the bundle. Independent ZIP CRC, every output SHA-256 and the carbon model record were checked.
 - Two controlled page layouts were measured at the same 1280×720 CSS viewport and DPR 2 using a no-store preview. Every image request had positive transfer bytes and completed; raw records are retained.
 - Changing returning visitors from 25% to 50% changed the displayed modelled lower scenario while preserving the uncached reference.
+
+
+## Narrated walkthrough
+
+The 90-second demo now includes calm synthetic English narration, synchronized scene by scene, plus selectable English captions. ffprobe confirms AAC audio and H.264 video; all 10 speech segments finish within their scenes. A SHA-256 hash of the copied video stream matches the silent original. The mixed audio decodes successfully, and measured true peak stays below 0 dBTP. Exact media checks are in `artifacts/demo-audio-verification.json`.

@@ -1,4 +1,4 @@
-**Live demo:** [https://leafbyte-green-shift.codexcirclejerk.chatgpt.site](https://leafbyte-green-shift.codexcirclejerk.chatgpt.site) · [Evidence](https://leafbyte-green-shift.codexcirclejerk.chatgpt.site/evidence/) · [Captioned walkthrough](https://leafbyte-green-shift.codexcirclejerk.chatgpt.site/evidence/demo.mp4)
+**Live demo:** [https://leafbyte-green-shift.codexcirclejerk.chatgpt.site](https://leafbyte-green-shift.codexcirclejerk.chatgpt.site) · [Evidence](https://leafbyte-green-shift.codexcirclejerk.chatgpt.site/evidence/) · [Narrated walkthrough](https://leafbyte-green-shift.codexcirclejerk.chatgpt.site/evidence/demo.mp4?v=narrated)
 
 # LeafByte
 
@@ -46,7 +46,7 @@ The app uses pinned **CO2.js 0.19.0**, explicitly selecting **SWD v4**. The mode
 ## Project and submission
 
 - [Impact-first Devpost story](docs/DEVPOST.md)
-- [Captioned walkthrough and reproduction notes](docs/DEMO.md)
+- [Narrated walkthrough and reproduction notes](docs/DEMO.md)
 - [Browser page measurements](docs/PAGE-MEASUREMENTS.md)
 - [Measurement and quality method](docs/METHODOLOGY.md)
 - [Verification record](docs/VALIDATION.md)

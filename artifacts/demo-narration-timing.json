@@ -1,0 +1,87 @@
+{
+  "voice": "Samantha",
+  "wordsPerMinute": 145,
+  "durationSeconds": 90,
+  "chapters": [
+    {
+      "chapter": 1,
+      "sceneStartSeconds": 0,
+      "sceneDurationSeconds": 7,
+      "speechStartSeconds": 0.18,
+      "speechEndSeconds": 5.172154,
+      "text": "Welcome to LeafByte. This page loads seven megabytes of original images."
+    },
+    {
+      "chapter": 2,
+      "sceneStartSeconds": 7,
+      "sceneDurationSeconds": 7,
+      "speechStartSeconds": 7.18,
+      "speechEndSeconds": 12.439909,
+      "text": "LeafByte keeps the layout, and cuts image data to two hundred and four kilobytes."
+    },
+    {
+      "chapter": 3,
+      "sceneStartSeconds": 14,
+      "sceneDurationSeconds": 8,
+      "speechStartSeconds": 14.18,
+      "speechEndSeconds": 20.293968,
+      "text": "A second page shows the same approach, using ninety-one point seven percent less image data."
+    },
+    {
+      "chapter": 4,
+      "sceneStartSeconds": 22,
+      "sceneDurationSeconds": 10,
+      "speechStartSeconds": 22.18,
+      "speechEndSeconds": 29.366939,
+      "text": "Start with a folder of photographs. These twenty-six licensed images are processed right here, in your browser."
+    },
+    {
+      "chapter": 5,
+      "sceneStartSeconds": 32,
+      "sceneDurationSeconds": 10,
+      "speechStartSeconds": 32.18,
+      "speechEndSeconds": 39.630068,
+      "text": "Take a moment to compare the real output. This laptop photo becomes twenty kilobytes at eight hundred pixels wide."
+    },
+    {
+      "chapter": 6,
+      "sceneStartSeconds": 42,
+      "sceneDurationSeconds": 10,
+      "speechStartSeconds": 42.18,
+      "speechEndSeconds": 49.094376,
+      "text": "Across the batch, the median reduction is ninety-two point four percent, with images resized for the web."
+    },
+    {
+      "chapter": 7,
+      "sceneStartSeconds": 52,
+      "sceneDurationSeconds": 12,
+      "speechStartSeconds": 52.18,
+      "speechEndSeconds": 62.627937,
+      "text": "For climate context, the Sustainable Web Design model estimates carbon impact. Adjust traffic, caching, and hosting to explore different scenarios."
+    },
+    {
+      "chapter": 8,
+      "sceneStartSeconds": 64,
+      "sceneDurationSeconds": 10,
+      "speechStartSeconds": 64.18,
+      "speechEndSeconds": 73.09542,
+      "text": "For ten thousand hypothetical views, this page models roughly eight to ten kilograms of carbon dioxide equivalent. These are estimates."
+    },
+    {
+      "chapter": 9,
+      "sceneStartSeconds": 74,
+      "sceneDurationSeconds": 8,
+      "speechStartSeconds": 74.18,
+      "speechEndSeconds": 81.744354,
+      "text": "Export your images, responsive markup, exact file sizes, and hashes that identify each output."
+    },
+    {
+      "chapter": 10,
+      "sceneStartSeconds": 82,
+      "sceneDurationSeconds": 8,
+      "speechStartSeconds": 82.18,
+      "speechEndSeconds": 89.349615,
+      "text": "Explore the evidence in the repository. Measured bytes, visible choices, and clear model assumptions."
+    }
+  ]
+}

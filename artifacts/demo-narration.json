@@ -1,0 +1,17 @@
+{
+  "voice": "Samantha",
+  "wordsPerMinute": 145,
+  "style": "Calm, warm narration with short pauses between scenes.",
+  "chapters": [
+    "Welcome to LeafByte. This page loads seven megabytes of original images.",
+    "LeafByte keeps the layout, and cuts image data to two hundred and four kilobytes.",
+    "A second page shows the same approach, using ninety-one point seven percent less image data.",
+    "Start with a folder of photographs. These twenty-six licensed images are processed right here, in your browser.",
+    "Take a moment to compare the real output. This laptop photo becomes twenty kilobytes at eight hundred pixels wide.",
+    "Across the batch, the median reduction is ninety-two point four percent, with images resized for the web.",
+    "For climate context, the Sustainable Web Design model estimates carbon impact. Adjust traffic, caching, and hosting to explore different scenarios.",
+    "For ten thousand hypothetical views, this page models roughly eight to ten kilograms of carbon dioxide equivalent. These are estimates.",
+    "Export your images, responsive markup, exact file sizes, and hashes that identify each output.",
+    "Explore the evidence in the repository. Measured bytes, visible choices, and clear model assumptions."
+  ]
+}
