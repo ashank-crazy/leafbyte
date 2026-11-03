@@ -1,31 +1,31 @@
 WEBVTT
 
-00:00:00.180 --> 00:00:05.172
+00:00:00.180 --> 00:00:05.916
 Welcome to LeafByte. This page loads seven megabytes of original images.
 
-00:00:07.180 --> 00:00:12.440
+00:00:07.180 --> 00:00:13.156
 LeafByte keeps the layout, and cuts image data to two hundred and four kilobytes.
 
-00:00:14.180 --> 00:00:20.294
+00:00:14.180 --> 00:00:21.428
 A second page shows the same approach, using ninety-one point seven percent less image data.
 
-00:00:22.180 --> 00:00:29.367
+00:00:22.180 --> 00:00:29.812
 Start with a folder of photographs. These twenty-six licensed images are processed right here, in your browser.
 
-00:00:32.180 --> 00:00:39.630
+00:00:32.180 --> 00:00:40.532
 Take a moment to compare the real output. This laptop photo becomes twenty kilobytes at eight hundred pixels wide.
 
-00:00:42.180 --> 00:00:49.094
+00:00:42.180 --> 00:00:50.292
 Across the batch, the median reduction is ninety-two point four percent, with images resized for the web.
 
-00:00:52.180 --> 00:01:02.628
-For climate context, the Sustainable Web Design model estimates carbon impact. Adjust traffic, caching, and hosting to explore different scenarios.
+00:00:52.180 --> 00:01:01.372
+For climate context, the Sustainable Web Design model estimates carbon impact, using your traffic, caching, and hosting assumptions.
 
-00:01:04.180 --> 00:01:13.095
-For ten thousand hypothetical views, this page models roughly eight to ten kilograms of carbon dioxide equivalent. These are estimates.
+00:01:04.180 --> 00:01:12.508
+For ten thousand hypothetical views, the first page models about eight to ten kilograms of carbon dioxide equivalent.
 
-00:01:14.180 --> 00:01:21.744
-Export your images, responsive markup, exact file sizes, and hashes that identify each output.
+00:01:14.180 --> 00:01:21.044
+Export optimized images, responsive markup, file sizes, and verification hashes.
 
-00:01:22.180 --> 00:01:29.350
-Explore the evidence in the repository. Measured bytes, visible choices, and clear model assumptions.
+00:01:22.180 --> 00:01:28.468
+Explore the repository for measured bytes, visible choices, and clear assumptions.

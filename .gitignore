@@ -18,3 +18,7 @@ artifacts/bench-output/
 
 artifacts/video-qa/
 artifacts/narration/
+
+.venv-narration/
+
+__pycache__/

@@ -10,9 +10,9 @@ The captures show actual results, not an interface mockup or a customer deployme
 
 Browser captures are retained locally under `artifacts/demo-frames/` and excluded from Git. `scripts/build-walkthrough.py` adds explanatory captions and creates the MP4, VTT and chapter list. It requires Pillow and ffmpeg. The source captions and durations are in that script; the current generated chapter record is `artifacts/demo-chapters.json`.
 
-The narration uses the installed macOS Samantha voice at a steady 145 words per minute, with short scene pauses and normalized speech volume. Its figures describe measured bytes and separate modelled scenarios. See [page measurements](PAGE-MEASUREMENTS.md), [the model](CO2-MODEL.md) and [corpus sources](CORPUS.md).
+The narration uses the Andrew neural voice, with natural pitch, a gentle −8% rate adjustment, short scene pauses and normalized speech volume. Its figures describe measured bytes and separate modelled scenarios. See [page measurements](PAGE-MEASUREMENTS.md), [the model](CO2-MODEL.md) and [corpus sources](CORPUS.md).
 
 
 ## Rebuild the narration
 
-After rebuilding the visual walkthrough, run `python3 scripts/add-narration.py` on macOS. The script uses the installed Samantha voice and ffmpeg; it does not call an external speech service. `artifacts/demo-narration.json` contains the reusable script, and `artifacts/demo-narration-timing.json` records the actual speech timing against each scene. The original H.264 video stream is copied unchanged while the narration and selectable English captions are added.
+After rebuilding the visual walkthrough, install `scripts/requirements-narration.txt` in a Python environment, then run `python scripts/add-narration.py`. The script uses pinned edge-tts 7.3.1, Microsoft Edge’s online neural speech service and ffmpeg. No API key is required; the public narration text is sent to that speech service. This is an authoring step and does not change the app’s browser-local image processing. `artifacts/demo-narration.json` contains the reusable script, and `artifacts/demo-narration-timing.json` records the actual speech timing against each scene. The original H.264 video stream is copied unchanged while the narration and selectable English captions are added.

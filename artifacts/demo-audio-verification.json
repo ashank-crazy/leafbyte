@@ -19,14 +19,15 @@
       "index": 2,
       "codec_name": "mov_text",
       "codec_type": "subtitle",
-      "duration": "89.350000"
+      "duration": "88.468000"
     }
   ],
-  "bytes": 2191142,
+  "bytes": 2136001,
   "videoStreamUnchanged": true,
   "narrationScenes": 10,
-  "audioIntegratedLufs": -18.03,
-  "audioTruePeakDbtp": -2.01,
-  "voice": "macOS Samantha",
-  "rateWordsPerMinute": 145
+  "audioIntegratedLufs": -18.67,
+  "audioTruePeakDbtp": -1.92,
+  "voice": "en-US-AndrewMultilingualNeural",
+  "provider": "Microsoft Edge neural speech via edge-tts",
+  "rate": "-8%"
 }
