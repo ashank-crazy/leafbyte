@@ -1,6 +1,6 @@
 # LeafByte photograph benchmark corpus
 
-This separate corpus contains **26 real stock photographs**, covering product still lifes, food and drink, animals, texture, interiors, architecture, infrastructure, landscapes, and plants. It is not loaded by the default demo. The corpus contains no AI-generated images and no satellite scenes. All 26 images were visually inspected in a contact sheet.
+This separate corpus contains **26 real stock photographs**, covering product still lifes, food and drink, animals, texture, interiors, architecture, infrastructure, landscapes, and plants. The default demo loads the six Everyday Objects photographs from this corpus; the full 26-image set remains available through the benchmark lab. The corpus contains no AI-generated images and no satellite scenes. All 26 images were visually inspected in a contact sheet.
 
 ## Source and permissions
 

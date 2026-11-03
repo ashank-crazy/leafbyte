@@ -12,6 +12,18 @@ This is a direct reduction in **resource use**: smaller image files for storage 
 
 Using Green Web Foundation **CO2.js 0.19.0 / Sustainable Web Design v4**, the first page's byte difference corresponds to a **modelled 7.70–10.20 kg CO₂e difference at 10,000 hypothetical page views**. The range compares a 25%-returning-visitor cache scenario with fully uncached visits, both on standard hosting. The model, assumptions and traces are documented and exported.
 
+## The problem
+
+Photos uploaded at camera resolution often appear far smaller on a web page. Serving those oversized originals makes each visitor download data that the displayed image does not need.
+
+## Who it's for
+
+LeafByte is for student teams, community groups, nonprofits and small site owners who publish image-heavy pages. It gives them ready-to-use image files and responsive markup without requiring a CDN or a build pipeline.
+
+## Built with
+
+LeafByte uses JavaScript, HTML/CSS, Canvas and browser-native image codecs for local processing, with Web Crypto for SHA-256 hashes. Its impact estimates use CO2.js 0.19.0 with Sustainable Web Design v4, and automated checks run with the Node.js test runner.
+
 ## What it does
 
 Drop images or choose a whole folder. LeafByte generates real encodings locally, checks sampled structural similarity, and selects smaller candidates within a bundle budget. A before/after wipe gives the user a visual check. Originals remain available.

@@ -6,7 +6,7 @@ These four real raster images were obtained from official NASA Science pages on 
 
 NASA’s [Images and Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/) allow factual educational/informational use of NASA content and say that NASA content generally is not subject to copyright in the United States. NASA must be acknowledged; its use does not imply NASA endorsement. Third-party copyright exceptions still apply. The selected pages identify the NASA/NASA–USGS creators below and do not mark these selected images as third-party copyrighted. The manifest uses the accurate NASA media-usage description rather than claiming a universal CC0 license.
 
-The images are credited factual benchmark inputs for LeafByte. Their source and preparation are disclosed here and in `dist/assets/samples.json`. The demo calculates optimization results from its actual runtime image inputs; the images are not evidence of measured environmental savings.
+The images are credited factual benchmark inputs for LeafByte. Their source and preparation are disclosed here and in `dist/assets/nasa-samples.json`. The demo calculates optimization results from its actual runtime image inputs; the images are not evidence of measured environmental savings.
 
 ## Blue Marble
 

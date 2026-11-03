@@ -67,11 +67,11 @@ The source Amazon image remains available for the opt-in sample benchmark. Conse
 
 1. Serve `dist/` over localhost or HTTPS. The README includes the local command.
 2. Open LeafByte in a modern browser. Select Balanced / 0.970, WebP, maximum width 1920 px and leave the budget blank.
-3. Load the sample pack and wait for actual encoding to complete. Record the current totals; other browsers may differ.
+3. Choose **Or run the NASA regression pack**, then wait for actual encoding to complete. Record the current totals; other browsers may differ.
 4. Inspect each image at an appropriate size, including details outside the sampled regions.
 5. Export the bundle. Extract it with a normal ZIP utility and compare each output file's byte length and SHA-256 with `manifest.json`.
 6. Change maximum width to 480 px, run optimization again and export a second bundle. Label this run “thumbnails” and disclose downscaling.
-7. Compare input hashes against `dist/assets/samples.json` to confirm the corpus. The four input files total 3,633,061 bytes.
+7. Compare input hashes against `dist/assets/nasa-samples.json` to confirm the corpus. The four input files total 3,633,061 bytes.
 
 ## Metric and environmental boundaries
 

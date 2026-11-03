@@ -2,7 +2,7 @@
 
 Checked on 3 November 2026 (IST).
 
-- `npm test`: 44 passing tests covering SSIM, native-resolution patch sampling, byte-budget allocation, format/animation checks, size limits, encoder-failure fallback, ZIP structure and CRC32, filenames, SHA-256, and attribution.
+- `npm test`: 48 passing tests covering SSIM, native-resolution patch sampling, byte-budget allocation, format/animation checks, size limits, encoder-failure fallback, ZIP structure and CRC32, filenames, SHA-256, and attribution.
 - `npm run check`: JavaScript syntax checks pass.
 - Actual browser sample imports, WebP encoding and ZIP downloads completed. Both benchmark ZIPs were independently read with Python's ZIP reader; all exported image lengths and SHA-256 hashes match their manifests. See [the benchmark](BENCHMARK.md).
 - An impossible 1 KB budget reports the minimum accepted bundle and the shortfall. A feasible 2 MB budget upgrades selected candidates and stays within the cap.
@@ -16,7 +16,7 @@ The sample benchmark records one browser's output; native encoders can differ el
 
 ## Expanded verification
 
-- 44 tests cover the pinned SWD v4 outputs, caching and hosting assumptions, responsive-width selection, variant hashes, srcset, separate storage totals and original-selection behavior.
+- 48 tests cover the pinned SWD v4 outputs, caching and hosting assumptions, responsive-width selection, variant hashes, srcset, separate storage totals and original-selection behavior.
 - A real whole-folder import accepted all 26 licensed corpus images. The app encoded them, created 26 responsive variants and exported the bundle. Independent ZIP CRC, every output SHA-256 and the carbon model record were checked.
 - Two controlled page layouts were measured at the same 1280×720 CSS viewport and DPR 2 using a no-store preview. Every image request had positive transfer bytes and completed; raw records are retained.
 - Changing returning visitors from 25% to 50% changed the displayed modelled lower scenario while preserving the uncached reference.
@@ -25,3 +25,8 @@ The sample benchmark records one browser's output; native encoders can differ el
 ## Narrated walkthrough
 
 The 90-second demo now includes calm synthetic English narration, synchronized scene by scene, plus selectable English captions. ffprobe confirms AAC audio and H.264 video; all 10 speech segments finish within their scenes. A SHA-256 hash of the copied video stream matches the silent original. The mixed audio decodes successfully, and measured true peak stays below 0 dBTP. Exact media checks are in `artifacts/demo-audio-verification.json`.
+
+
+## Headline demo verification
+
+The primary **Try a real sample pack** button loaded the six Everyday Objects originals, reset a deliberately changed JPEG/high-fidelity/budget/width configuration, and ran WebP at 800 px with a 0.970 sampled similarity floor, no byte budget and no responsive extras. The actual browser export contains **7,086,897 input bytes → 204,236 output bytes: 97.1% reduction**. All six output hashes and ZIP CRCs match the exported manifest, retained at `artifacts/primary-demo-benchmark.json`. NASA remains the separate four-image regression option at 1920 px. `npm test` passes 48 tests and `npm run check` passes.

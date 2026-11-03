@@ -1,10 +1,11 @@
 import { optimizeImage, optimizeResponsiveImage, chooseBundle, formatBytes, sniffImage, LIMITS } from './engine.js';
 import { buildExport, safeFilename } from './export.js';
 import { estimateTransferImpact } from './carbon.js';
+import { DEMO_PACKS } from './demo-packs.js';
 
 const $ = id => document.getElementById(id);
-const state = { entries: [], active: null, busy: false, samples: [], nextId: 1, selected: [], appliedSettings: null, outputUrl: null, toastTimer: null, completedAt: null };
-const controls = ['demo-button', 'stage-demo', 'file-input', 'folder-input', 'folder-button', 'responsive', 'clear-button', 'fidelity', 'max-width', 'output-format', 'budget', 'optimize-button'];
+const state = { entries: [], active: null, busy: false, samplePacks: new Map(), nextId: 1, selected: [], appliedSettings: null, outputUrl: null, toastTimer: null, completedAt: null };
+const controls = ['demo-button', 'stage-demo', 'nasa-demo-button', 'file-input', 'folder-input', 'folder-button', 'responsive', 'clear-button', 'fidelity', 'max-width', 'output-format', 'budget', 'optimize-button'];
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -79,20 +80,40 @@ async function addFiles(files, sampleInfo = []) {
   announce(state.entries.length ? `${state.entries.length} image${state.entries.length === 1 ? '' : 's'} ready. Find your fit, then lighten the bundle.` : 'Add a supported still image to get started.');
   } finally { setBusy(false); render(); }
 }
-async function loadDemo() {
+function readSamples(manifest) {
+  if (!state.samplePacks.has(manifest)) {
+    const request = fetch(manifest).then(response => {
+      if (!response.ok) throw new Error('The sample list could not be loaded.');
+      return response.json();
+    }).then(samples => {
+      if (!Array.isArray(samples) || !samples.length) throw new Error('The sample list is empty or invalid.');
+      return samples;
+    }).catch(error => { state.samplePacks.delete(manifest); throw error; });
+    state.samplePacks.set(manifest, request);
+  }
+  return state.samplePacks.get(manifest);
+}
+async function loadDemo(packName = 'objects') {
   if (state.busy) return;
-  clearAll(); setBusy(true); announce('Bringing in four credited NASA images…');
+  const pack = DEMO_PACKS[packName];
+  if (!pack) return;
+  clearAll(); setBusy(true); announce(pack.loadingMessage);
   showError('');
   try {
-    if (!state.samples.length) state.samples = await fetch('assets/samples.json').then(response => { if (!response.ok) throw new Error('The sample list could not be loaded.'); return response.json(); });
-    const files = await Promise.all(state.samples.map(async item => {
+    const samples = await readSamples(pack.manifest);
+    const files = await Promise.all(samples.map(async item => {
       const response = await fetch(item.path);
       if (!response.ok) throw new Error('A sample image could not be loaded. Try adding your own images.');
       const blob = await response.blob();
       return new File([blob], item.path.split('/').pop(), { type: blob.type || 'image/jpeg' });
     }));
-    setBusy(false); await addFiles(files, state.samples);
-    $('library-label').textContent = 'NASA SAMPLE PACK · REAL ENCODING RESULTS';
+    $('max-width').value = String(pack.settings.maxWidth);
+    $('fidelity').value = String(pack.settings.similarityFloor);
+    $('output-format').value = pack.settings.format;
+    $('responsive').checked = pack.settings.responsive;
+    $('budget').value = '';
+    setBusy(false); await addFiles(files, samples);
+    $('library-label').textContent = pack.label;
     await runOptimization();
     $('workspace').scrollIntoView({ behavior: 'smooth', block: 'start' });
   } catch (error) { setBusy(false); showError(error.message); announce('Could not load the sample pack.'); }
@@ -248,7 +269,8 @@ function invalidate() {
   announce(state.entries.length ? 'Settings changed. Lighten the bundle again to compare new outputs.' : 'Add images to get started.');
 }
 function openMethod() { if (!$('method-dialog').open) $('method-dialog').showModal(); }
-$('demo-button').addEventListener('click', loadDemo); $('stage-demo').addEventListener('click', loadDemo);
+$('demo-button').addEventListener('click', () => loadDemo('objects')); $('stage-demo').addEventListener('click', () => loadDemo('objects'));
+$('nasa-demo-button').addEventListener('click', () => loadDemo('nasa'));
 $('clear-button').addEventListener('click', clearAll);
 $('optimize-button').addEventListener('click', runOptimization);
 $('export-button').addEventListener('click', exportBundle);
@@ -276,11 +298,11 @@ for (const event of ['dragleave', 'drop']) $('dropzone').addEventListener(event,
 $('dropzone').addEventListener('drop', event => { if (!state.busy) addFiles(Array.from(event.dataTransfer.files)); });
 document.addEventListener('dragover', event => event.preventDefault());
 document.addEventListener('drop', event => event.preventDefault());
-fetch('assets/samples.json').then(response => response.ok ? response.json() : []).then(samples => {
-  state.samples = samples;
-  const cover = samples.find(item => item.path.includes('amazon')) || samples[0];
-  if (cover) $('hero-photo').style.backgroundImage = "url('assets/hero.webp')";
+$('hero-photo').style.backgroundImage = "url('assets/hero.webp')";
+Promise.allSettled(Object.values(DEMO_PACKS).map(pack => readSamples(pack.manifest))).then(packs => {
   const credits = $('sample-credits');
+  credits.replaceChildren(document.createTextNode('The primary demo uses the six Everyday Objects photographs. The optional NASA regression pack and hero image retain their separate credits.'));
+  const samples = packs.flatMap(pack => pack.status === 'fulfilled' ? pack.value : []);
   for (const sample of samples) { const line = element('span'); const link = element('a', '', sample.name); link.href = sample.source; link.target = '_blank'; link.rel = 'noopener'; line.append(document.createElement('br'), link, document.createTextNode(` — ${sample.credit}. ${sample.preparation}`)); credits.append(line); }
 }).catch(() => {});
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(() => {});

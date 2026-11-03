@@ -1,0 +1,499 @@
+{
+  "schema": "leafbyte-export-v1",
+  "generatedAt": "2026-11-03T08:25:39.413Z",
+  "settings": {
+    "maxWidth": 800,
+    "similarityFloor": 0.97,
+    "format": "image/webp",
+    "responsive": false,
+    "budgetBytes": null,
+    "optimizationCompletedAt": "2026-11-03T08:23:52.510Z",
+    "modelledImpact": {
+      "library": "@tgwf/co2",
+      "version": "0.19.0",
+      "model": "Sustainable Web Design Model v4",
+      "modelVersion": 4,
+      "gridIntensityGramsPerKwh": 494,
+      "gramsPerUncachedGigabyte": 148.2,
+      "unit": "gCO2e",
+      "lowGrams": 7701.078219510001,
+      "highGrams": 10200.103602000001,
+      "scenarios": [
+        {
+          "id": "configured-visits",
+          "name": "Configured visitor, cache and hosting assumptions",
+          "grams": 7701.078219510001,
+          "gramsPerAssumedVisit": 0.7701078219510001,
+          "visits": 10000,
+          "bytesSavedPerUncachedVisit": 6882661,
+          "assumedTransferredBytesAvoided": 51964090550,
+          "greenHosting": false,
+          "greenHostingFactor": 0,
+          "firstVisitPercentage": 0.75,
+          "returnVisitPercentage": 0.25,
+          "dataReloadRatio": 0.02,
+          "basis": "Illustrative user-editable scenario. Initial 75% new / 25% returning visits and 2% data reload reuse the documented legacy CO2.js preset; they are not SWD v4 defaults or measured audience behavior.",
+          "upstreamTrace": {
+            "co2": 0.7701078219510001,
+            "green": false,
+            "variables": {
+              "description": "Below are the variables used to calculate this CO2 estimate.",
+              "bytes": 6882661,
+              "gridIntensity": {
+                "description": "The grid intensity (grams per kilowatt-hour) used to calculate this CO2 estimate.",
+                "device": {
+                  "value": 494
+                },
+                "dataCenter": {
+                  "value": 494
+                },
+                "network": {
+                  "value": 494
+                }
+              },
+              "greenHostingFactor": 0,
+              "dataReloadRatio": 0.02,
+              "firstVisitPercentage": 0.75,
+              "returnVisitPercentage": 0.25
+            }
+          }
+        },
+        {
+          "id": "uncached-reference",
+          "name": "All-new visits, no green hosting: SWD v4 reference",
+          "grams": 10200.103602000001,
+          "gramsPerAssumedVisit": 1.0200103602000001,
+          "visits": 10000,
+          "bytesSavedPerUncachedVisit": 6882661,
+          "assumedTransferredBytesAvoided": 68826610000,
+          "greenHosting": false,
+          "greenHostingFactor": 0,
+          "firstVisitPercentage": 1,
+          "returnVisitPercentage": 0,
+          "dataReloadRatio": 0,
+          "basis": "Pinned SWD v4 default visit mix and green-hosting setting. Every assumed visit downloads the full bundle; no cache reduction is applied.",
+          "upstreamTrace": {
+            "co2": 1.0200103602000001,
+            "green": false,
+            "variables": {
+              "description": "Below are the variables used to calculate this CO2 estimate.",
+              "bytes": 6882661,
+              "gridIntensity": {
+                "description": "The grid intensity (grams per kilowatt-hour) used to calculate this CO2 estimate.",
+                "device": {
+                  "value": 494
+                },
+                "dataCenter": {
+                  "value": 494
+                },
+                "network": {
+                  "value": 494
+                }
+              },
+              "greenHostingFactor": 0,
+              "dataReloadRatio": 0,
+              "firstVisitPercentage": 1,
+              "returnVisitPercentage": 0
+            }
+          }
+        }
+      ],
+      "assumptions": {
+        "bytesSavedPerUncachedVisit": 6882661,
+        "hypotheticalVisits": 10000,
+        "configuredReturnVisitPercentage": 0.25,
+        "configuredDataReloadRatio": 0.02,
+        "configuredGreenHosting": false,
+        "gridIntensityGramsPerKwh": 494,
+        "gigabyteBytes": 1000000000,
+        "rangeMeaning": "The minimum and maximum of two explicitly named model configurations; not a confidence interval, scientific uncertainty range or guaranteed bounds on actual emissions.",
+        "hosting": "Green hosting is an assumption, not a lookup. In SWD v4 it removes the modeled data-center operational component; network, device and embodied components remain.",
+        "boundary": "Attributional model of data-center, network and end-user-device operational and embodied emissions, using bytes as a proxy.",
+        "interpretation": "A modeled difference under hypothetical visits, not measured electricity or verified avoided emissions. It is not a marginal energy or carbon-saving measurement.",
+        "exclusions": "Does not measure real traffic, caching, deployment, optimization overhead, the application payload, or the net life-cycle effect of image replacements."
+      },
+      "sources": [
+        {
+          "title": "Green Web Foundation: CO2.js models",
+          "url": "https://developers.thegreenwebfoundation.org/co2js/models/overview/"
+        },
+        {
+          "title": "Green Web Foundation: perVisitTrace options",
+          "url": "https://developers.thegreenwebfoundation.org/co2js/functions/pervisit-trace/"
+        },
+        {
+          "title": "Sustainable Web Design v4 methodology",
+          "url": "https://sustainablewebdesign.org/estimating-digital-emissions/"
+        },
+        {
+          "title": "Pinned CO2.js 0.19.0 constants and legacy cache preset",
+          "url": "https://github.com/thegreenwebfoundation/co2.js/blob/v0.19.0/src/constants/index.js"
+        },
+        {
+          "title": "Official npm package 0.19.0",
+          "url": "https://www.npmjs.com/package/@tgwf/co2/v/0.19.0"
+        }
+      ]
+    },
+    "metric": "mean local 8\u00d78 luminance SSIM on nine full-resolution patches, each up to 128\u00d7128, on a 3\u00d73 grid at output resolution",
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sampleAttribution": [
+      {
+        "name": "Laptop on a wooden desk",
+        "path": "evidence/assets/01-laptop-desk.jpg",
+        "credit": "Alejandro Escamilla / Unsplash",
+        "source": "https://unsplash.com/photos/yC-Yzbqy7PY",
+        "download": "https://images.unsplash.com/flagged/1/apple-gear-looking-pretty.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "product",
+        "width": 5616,
+        "height": 3744,
+        "bytes": 1989373,
+        "sha256": "173135e7970e246706de6a3537be31625fcf347e4b9e567d9fbe1f5548293ce2",
+        "originalWidth": 5616,
+        "originalHeight": 3744,
+        "originalBytes": 1989373,
+        "originalSha256": "173135e7970e246706de6a3537be31625fcf347e4b9e567d9fbe1f5548293ce2",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date.",
+        "description": "Laptop on a wooden desk"
+      },
+      {
+        "name": "Books and devices on a desk",
+        "path": "evidence/assets/02-creative-workspace.jpg",
+        "credit": "Aleks Dorohovich / Unsplash",
+        "source": "https://unsplash.com/photos/nJdwUHmaY8A",
+        "download": "https://images.unsplash.com/3/doctype-hi-res.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "product",
+        "width": 3670,
+        "height": 2462,
+        "bytes": 1647999,
+        "sha256": "e43670ad389dbe8cba335da0d3168b27785151dce9c55c0c50719ed382f0393d",
+        "originalWidth": 3670,
+        "originalHeight": 2462,
+        "originalBytes": 1647999,
+        "originalSha256": "e43670ad389dbe8cba335da0d3168b27785151dce9c55c0c50719ed382f0393d",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date.",
+        "description": "Books and devices on a desk"
+      },
+      {
+        "name": "Everyday accessories flat lay",
+        "path": "evidence/assets/03-everyday-accessories.jpg",
+        "credit": "Vadim Sherbakov / Unsplash",
+        "source": "https://unsplash.com/photos/tCICLJ5ktBE",
+        "download": "https://images.unsplash.com/3/www.madebyvadim.com.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "product",
+        "width": 2000,
+        "height": 1316,
+        "bytes": 603580,
+        "sha256": "059a70b6b6e9a2be541393d31b9f67f8e68e1b05edcb915d7dfff49ec31dc873",
+        "originalWidth": 4209,
+        "originalHeight": 2769,
+        "originalBytes": 2487093,
+        "originalSha256": "6974e5d6bc1853d8b6dfeb3cbacdef0f2fd05d4e5cd90a4d8de625a89f4baf29",
+        "originalRasterRetained": false,
+        "preparation": "Before benchmarking: proportionally resized to fit within 2000 \u00d7 2000 pixels using Lanczos; JPEG quality 88, 4:4:4 chroma, optimized coding. No generative processing. This is corpus preparation, not a LeafByte output.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date.",
+        "description": "Everyday accessories flat lay"
+      },
+      {
+        "name": "Printed mug on a table",
+        "path": "evidence/assets/04-printed-mug.jpg",
+        "credit": "Shyamanta Baruah / Unsplash",
+        "source": "https://unsplash.com/photos/aeVA-j1y2BY",
+        "download": "https://images.unsplash.com/4/cuba-cup.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "food-drink",
+        "width": 1280,
+        "height": 901,
+        "bytes": 182597,
+        "sha256": "a5e84ad063d3695a2d1fc01f3d94a820cfc0ecdcf3343b4dec218cfe445f70cc",
+        "originalWidth": 1280,
+        "originalHeight": 901,
+        "originalBytes": 182597,
+        "originalSha256": "a5e84ad063d3695a2d1fc01f3d94a820cfc0ecdcf3343b4dec218cfe445f70cc",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date.",
+        "description": "Printed mug on a table"
+      },
+      {
+        "name": "Disassembled camera components",
+        "path": "evidence/assets/05-camera-components.jpg",
+        "credit": "Vadim Sherbakov / Unsplash",
+        "source": "https://unsplash.com/photos/osSryggkso4",
+        "download": "https://images.unsplash.com/4/madebyvadim.jpg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "product",
+        "width": 4179,
+        "height": 2790,
+        "bytes": 2040465,
+        "sha256": "d28710fb317c9f5121ca9197860ca4dbb4459121cf29a0abdc3226e4a910bc36",
+        "originalWidth": 4179,
+        "originalHeight": 2790,
+        "originalBytes": 2040465,
+        "originalSha256": "d28710fb317c9f5121ca9197860ca4dbb4459121cf29a0abdc3226e4a910bc36",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date.",
+        "description": "Disassembled camera components"
+      },
+      {
+        "name": "Coffee cup against red",
+        "path": "evidence/assets/15-coffee-red.jpg",
+        "credit": "Justin Leibow / Unsplash",
+        "source": "https://unsplash.com/photos/ZJsseAxEcqM",
+        "download": "https://images.unsplash.com/7/color-correct-coffee.JPG",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "category": "food-drink",
+        "width": 5422,
+        "height": 3050,
+        "bytes": 622883,
+        "sha256": "0af4bfd54dc6d7c1bfab71591a0162db0a53ea89c37d4e70baaf372c6dcfb1e1",
+        "originalWidth": 5422,
+        "originalHeight": 3050,
+        "originalBytes": 622883,
+        "originalSha256": "0af4bfd54dc6d7c1bfab71591a0162db0a53ea89c37d4e70baaf372c6dcfb1e1",
+        "originalRasterRetained": true,
+        "preparation": "Unchanged original raster downloaded from the image URL on the official Unsplash page.",
+        "licenseVerifiedOn": "2026-11-03",
+        "licenseEvidence": "Official source page displayed Free to use under the Unsplash License and Download free; no Unsplash+ License marker.",
+        "provenance": "Real stock photograph from Unsplash. No claim is made about phone capture, camera model, or capture date.",
+        "description": "Coffee cup against red"
+      }
+    ],
+    "excludedImages": []
+  },
+  "summary": {
+    "images": 6,
+    "inputBytes": 7086897,
+    "outputBytes": 204236,
+    "primaryOutputBytes": 204236,
+    "additionalVariantBytes": 0,
+    "allImageBytes": 204236,
+    "variantFiles": 0,
+    "savedBytes": 6882661,
+    "savedPercent": 97.11811812701666
+  },
+  "measurement": {
+    "bytes": "Exact file lengths, excluding ZIP overhead and generated documentation. outputBytes and primaryOutputBytes count only selected primary images. additionalVariantBytes counts smaller responsive files. allImageBytes is the actual combined image storage in this archive. savedBytes and savedPercent compare source files with primary outputs only; they are not total archive storage savings.",
+    "similarity": "Encoded candidates use mean local luminance SSIM in non-overlapping 8 \u00d7 8 blocks across nine native-resolution patches up to 128 \u00d7 128 pixels, positioned at left/center/right by top/middle/bottom. Patches are not downsampled and can overlap on small images. The original is first resampled to the output dimensions. RGBA samples are composited on white. Retained originals receive 1 by file identity. This does not measure resolution loss against the full original and can miss color shifts or artifacts outside the patches. It is not a guarantee of perceptual equivalence, legibility, color fidelity or accessibility. Inspect the images yourself.",
+    "savings": "Output file reduction only. Storage or transfer benefits require using these files instead of the originals. Cache behavior, repeat visits and encoding overhead are not measured.",
+    "responsive": "Responsive variants are additional stored files. The browser chooses among srcset candidates using layout size, pixel density and browser behavior; it does not ordinarily download every variant for one image. Supplied sizes assume full viewport width up to the primary image width and must be adapted to the website layout. Actual candidate selection and transferred bytes are not measured. Original selections omit variants. Folder-relative input paths are recorded for mapping; exported filenames are flattened and deduplicated.",
+    "environment": "Electricity, water consumption, avoided emissions and total environmental impact have not been measured. Traffic scenarios, if shown in the app, are hypothetical.",
+    "hashes": "SHA-256 of each original input file and each exact exported output file."
+  },
+  "images": [
+    {
+      "input": {
+        "name": "01-laptop-desk.jpg",
+        "relativePath": "01-laptop-desk.jpg",
+        "bytes": 1989373,
+        "width": 5616,
+        "height": 3744,
+        "mime": "image/jpeg",
+        "sha256": "173135e7970e246706de6a3537be31625fcf347e4b9e567d9fbe1f5548293ce2"
+      },
+      "output": {
+        "path": "images/01-laptop-desk-leafbyte.webp",
+        "bytes": 20004,
+        "width": 800,
+        "height": 533,
+        "mime": "image/webp",
+        "sha256": "696899c56a8498d6ead73d7741c17c562d23bf156cd21a8b61d91f9ecd44cb1d"
+      },
+      "variants": [],
+      "selectedCandidate": 5,
+      "encoderQuality": 0.6,
+      "sampledSimilarity": 0.9716829667944284,
+      "keptOriginal": false,
+      "savedBytes": 1969369,
+      "savedPercent": 98.994457047522,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 1388.0999999940395
+    },
+    {
+      "input": {
+        "name": "02-creative-workspace.jpg",
+        "relativePath": "02-creative-workspace.jpg",
+        "bytes": 1647999,
+        "width": 3670,
+        "height": 2462,
+        "mime": "image/jpeg",
+        "sha256": "e43670ad389dbe8cba335da0d3168b27785151dce9c55c0c50719ed382f0393d"
+      },
+      "output": {
+        "path": "images/02-creative-workspace-leafbyte.webp",
+        "bytes": 27152,
+        "width": 800,
+        "height": 537,
+        "mime": "image/webp",
+        "sha256": "96bb16e305a817f789c2c3cc9d5ebdb99736f67d4bbb13c559aff526a3c33a67"
+      },
+      "variants": [],
+      "selectedCandidate": 4,
+      "encoderQuality": 0.68,
+      "sampledSimilarity": 0.9710674359207248,
+      "keptOriginal": false,
+      "savedBytes": 1620847,
+      "savedPercent": 98.35242618472464,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 1350.2000000178814
+    },
+    {
+      "input": {
+        "name": "03-everyday-accessories.jpg",
+        "relativePath": "03-everyday-accessories.jpg",
+        "bytes": 603580,
+        "width": 2000,
+        "height": 1316,
+        "mime": "image/jpeg",
+        "sha256": "059a70b6b6e9a2be541393d31b9f67f8e68e1b05edcb915d7dfff49ec31dc873"
+      },
+      "output": {
+        "path": "images/03-everyday-accessories-leafbyte.webp",
+        "bytes": 82054,
+        "width": 800,
+        "height": 526,
+        "mime": "image/webp",
+        "sha256": "26a70afe9183c5579c96fd6e9616e537cb1d1a69bab14a69155f466b77d2b124"
+      },
+      "variants": [],
+      "selectedCandidate": 1,
+      "encoderQuality": 0.92,
+      "sampledSimilarity": 0.9724384940525286,
+      "keptOriginal": false,
+      "savedBytes": 521526,
+      "savedPercent": 86.4054474966036,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 1154.5999999940395
+    },
+    {
+      "input": {
+        "name": "04-printed-mug.jpg",
+        "relativePath": "04-printed-mug.jpg",
+        "bytes": 182597,
+        "width": 1280,
+        "height": 901,
+        "mime": "image/jpeg",
+        "sha256": "a5e84ad063d3695a2d1fc01f3d94a820cfc0ecdcf3343b4dec218cfe445f70cc"
+      },
+      "output": {
+        "path": "images/04-printed-mug-leafbyte.webp",
+        "bytes": 39756,
+        "width": 800,
+        "height": 563,
+        "mime": "image/webp",
+        "sha256": "f958d617643bde946b04761d317a8e4ccce3c6de7dac6f40fff6842bb5130377"
+      },
+      "variants": [],
+      "selectedCandidate": 2,
+      "encoderQuality": 0.84,
+      "sampledSimilarity": 0.9732530211003022,
+      "keptOriginal": false,
+      "savedBytes": 142841,
+      "savedPercent": 78.22746266368013,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 1110.9000000059605
+    },
+    {
+      "input": {
+        "name": "05-camera-components.jpg",
+        "relativePath": "05-camera-components.jpg",
+        "bytes": 2040465,
+        "width": 4179,
+        "height": 2790,
+        "mime": "image/jpeg",
+        "sha256": "d28710fb317c9f5121ca9197860ca4dbb4459121cf29a0abdc3226e4a910bc36"
+      },
+      "output": {
+        "path": "images/05-camera-components-leafbyte.webp",
+        "bytes": 30514,
+        "width": 800,
+        "height": 534,
+        "mime": "image/webp",
+        "sha256": "e946e18d9b2fce59ae24e959837ae67e7af669c5471b650deea2844fb34ee9eb"
+      },
+      "variants": [],
+      "selectedCandidate": 3,
+      "encoderQuality": 0.76,
+      "sampledSimilarity": 0.9723393194065587,
+      "keptOriginal": false,
+      "savedBytes": 2009951,
+      "savedPercent": 98.50455655941171,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 1443
+    },
+    {
+      "input": {
+        "name": "15-coffee-red.jpg",
+        "relativePath": "15-coffee-red.jpg",
+        "bytes": 622883,
+        "width": 5422,
+        "height": 3050,
+        "mime": "image/jpeg",
+        "sha256": "0af4bfd54dc6d7c1bfab71591a0162db0a53ea89c37d4e70baaf372c6dcfb1e1"
+      },
+      "output": {
+        "path": "images/15-coffee-red-leafbyte.webp",
+        "bytes": 4756,
+        "width": 800,
+        "height": 450,
+        "mime": "image/webp",
+        "sha256": "2b0a935914f2c6dd6f1163af9e6f6b785a92868ae72d5ae0a01cce8cbdcd9375"
+      },
+      "variants": [],
+      "selectedCandidate": 6,
+      "encoderQuality": 0.52,
+      "sampledSimilarity": 0.9914228489113115,
+      "keptOriginal": false,
+      "savedBytes": 618127,
+      "savedPercent": 99.23645371602693,
+      "warnings": [
+        "Similarity compares compression at the resized dimensions; it does not measure detail lost through downscaling.",
+        "Similarity uses nine full-resolution patches up to 128 \u00d7 128 pixels, with 8 \u00d7 8 luminance SSIM blocks and transparency composited on white. It can miss color shifts or artifacts outside the patches; inspect important details. Small-image patches can overlap."
+      ],
+      "processingDurationMs": 1178.0999999940395
+    }
+  ],
+  "sources": [
+    "https://www.w3.org/TR/web-sustainability-guidelines/",
+    "https://web.dev/learn/performance/image-performance"
+  ]
+}

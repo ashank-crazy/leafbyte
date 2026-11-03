@@ -16,7 +16,7 @@ These page results are matched cold-load measurements on pages controlled by thi
 
 ## Use it
 
-1. Add images or choose a whole folder, up to 200 files / 200 MiB.
+1. Choose **Try a real sample pack** to reproduce the Everyday Objects headline at 800 px, or add your own images or folder (up to 200 files / 200 MiB). The secondary **NASA regression pack** retains the original four-image benchmark.
 2. Choose intended dimensions and a similarity floor. Optionally enable responsive variants and set a primary-file byte budget.
 3. Run optimization and visually compare the actual files.
 4. Export the ZIP. It includes images, `srcset`/`<picture>` snippets, a manifest, hashes, source credits and model assumptions.

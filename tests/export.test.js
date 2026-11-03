@@ -131,6 +131,17 @@ test('sample credits survive in readable export instructions and the manifest', 
   assert.deepEqual(JSON.parse(decoder.decode(unpacked.get('manifest.json'))).settings.sampleAttribution, sampleAttribution);
 });
 
+test('Everyday Objects credits retain their source and license without a NASA label', async () => {
+  const sampleAttribution = [{ name: 'Laptop', credit: 'Alejandro Escamilla / Unsplash', source: 'https://unsplash.com/photos/yC-Yzbqy7PY', preparation: 'Unchanged source raster.', licenseUrl: 'https://unsplash.com/license' }];
+  const unpacked = entries(new Uint8Array(await (await buildExport([result()], [0], { sampleAttribution })).arrayBuffer()));
+  const readme = decoder.decode(unpacked.get('README.txt'));
+  assert.match(readme, /Alejandro Escamilla \/ Unsplash/);
+  assert.match(readme, /https:\/\/unsplash.com\/photos\/yC-Yzbqy7PY/);
+  assert.match(readme, /https:\/\/unsplash.com\/license/);
+  assert.doesNotMatch(readme, /NASA/);
+  assert.deepEqual(JSON.parse(decoder.decode(unpacked.get('manifest.json'))).settings.sampleAttribution, sampleAttribution);
+});
+
 function variant(width, bytes, mime = 'image/webp') {
   return { width, height: width / 2, blob: new Blob([new Uint8Array(bytes)], { type: mime }), bytes: 999, mime, quality: 0.68, similarity: 0.98, keptOriginal: false };
 }
